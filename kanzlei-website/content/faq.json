@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "question": "Wie vereinbare ich einen Termin?",
+      "answer": "Sie können einen Termin online über unser Buchungssystem vereinbaren oder uns telefonisch kontaktieren. Wir melden uns zeitnah bei Ihnen zurück."
+    },
+    {
+      "question": "Was kostet eine Erstberatung?",
+      "answer": "Die Kosten für eine Erstberatung richten sich nach dem Umfang der Beratung. Gerne informieren wir Sie vorab über die voraussichtlichen Kosten."
+    },
+    {
+      "question": "Kann ich auch außerhalb der Sprechzeiten einen Termin vereinbaren?",
+      "answer": "Ja, nach Vereinbarung sind auch Termine außerhalb unserer regulären Sprechzeiten möglich."
+    },
+    {
+      "question": "Welche Unterlagen soll ich zum ersten Termin mitbringen?",
+      "answer": "Bitte bringen Sie alle relevanten Unterlagen mit, die mit Ihrem Anliegen zusammenhängen. Dazu gehören z.B. Verträge, Korrespondenz und Dokumente."
+    },
+    {
+      "question": "Bieten Sie auch Video-Beratung an?",
+      "answer": "Ja, wir bieten Video-Beratung an. Bitte teilen Sie uns bei der Terminbuchung mit, wenn Sie eine Video-Beratung wünschen."
+    },
+    {
+      "question": "Wie lange dauert ein typisches Erstgespräch?",
+      "answer": "Ein Erstgespräch dauert in der Regel 30 bis 60 Minuten, abhängig von der Komplexität Ihres Anliegens."
+    },
+    {
+      "question": "Übernimmt meine Rechtsschutzversicherung die Kosten?",
+      "answer": "Dies hängt von Ihrem Versicherungsvertrag ab. Wir empfehlen, vorab Kontakt mit Ihrer Versicherung aufzunehmen und die Deckungszusage einzuholen."
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Anwalt und Rechtsanwalt?",
+      "answer": "In Deutschland ist die Berufsbezeichnung \"Rechtsanwalt\" geschützt. Jeder zugelassene Anwalt ist automatisch Rechtsanwalt."
+    },
+    {
+      "question": "Kann ich mich auch ohne Termin in der Kanzlei vorstellen?",
+      "answer": "Wir empfehlen eine vorherige Terminvereinbarung, um längere Wartezeiten zu vermeiden. Ohne Termin können wir lediglich kurze Auskünfte geben."
+    },
+    {
+      "question": "Wie kann ich meine Unterlagen sicher übermitteln?",
+      "answer": "Sie können Ihre Unterlagen persönlich vorbeibringen, per Post senden oder unser sicheres Upload-Portal nutzen. Bitte kontaktieren Sie uns für die Übermittlung."
+    }
+  ]
+}

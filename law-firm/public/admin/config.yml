@@ -1,0 +1,70 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "homepage"
+    label: "Startseite"
+    folder: "content"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Untertitel", name: "subtitle", widget: "string"}
+      - {label: "Hero Titel", name: "heroTitle", widget: "string"}
+      - {label: "Hero Untertitel", name: "heroSubtitle", widget: "text"}
+      - {label: "CTA Text", name: "ctaText", widget: "string"}
+      - {label: "E-Mail", name: "contactEmail", widget: "string"}
+      - {label: "Telefon", name: "contactPhone", widget: "string"}
+      - {label: "Adresse", name: "contactAddress", widget: "string"}
+
+  - name: "services"
+    label: "Leistungen"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung", name: "description", widget: "text"}
+      - {label: "Icon", name: "icon", widget: "string"}
+      - {label: "Reihenfolge", name: "order", widget: "number"}
+
+  - name: "faq"
+    label: "FAQ"
+    folder: "content/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Frage", name: "question", widget: "string"}
+      - {label: "Antwort", name: "answer", widget: "text"}
+      - {label: "Reihenfolge", name: "order", widget: "number"}
+
+  - name: "downloads"
+    label: "Downloads"
+    folder: "content/downloads"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung", name: "description", widget: "text"}
+      - {label: "URL", name: "url", widget: "string"}
+      - {label: "Reihenfolge", name: "order", widget: "number"}
+
+  - name: "impressum"
+    label: "Impressum"
+    folder: "content"
+    create: false
+    slug: "impressum"
+    fields:
+      - {label: "Inhalt", name: "content", widget: "markdown"}
+
+  - name: "datenschutz"
+    label: "Datenschutz"
+    folder: "content"
+    create: false
+    slug: "datenschutz"
+    fields:
+      - {label: "Inhalt", name: "content", widget: "markdown"}

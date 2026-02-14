@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    file: "content/homepage.md"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung", name: "description", widget: "string"}
+      - {label: "Hero Titel", name: "heroTitle", widget: "string"}
+      - {label: "Hero Untertitel", name: "heroSubtitle", widget: "string"}
+      - {label: "CTA Text", name: "ctaText", widget: "string"}
+      - {label: "Inhalt", name: "body", widget: "markdown"}
+
+  - name: "services"
+    label: "Leistungen"
+    file: "content/services.md"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung", name: "description", widget: "string"}
+      - {label: "Leistungen", name: "services", widget: "list", fields: [
+          {label: "Titel", name: "title", widget: "string"},
+          {label: "Beschreibung", name: "description", widget: "text"}
+        ]}
+      - {label: "Inhalt", name: "body", widget: "markdown"}
+
+  - name: "impressum"
+    label: "Impressum"
+    file: "content/impressum.md"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung", name: "description", widget: "string"}
+      - {label: "Inhalt", name: "body", widget: "markdown"}
+
+  - name: "datenschutz"
+    label: "Datenschutz"
+    file: "content/datenschutz.md"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung", name: "description", widget: "string"}
+      - {label: "Inhalt", name: "body", widget: "markdown"}
+
+  - name: "faq"
+    label: "FAQ"
+    file: "content/faq.json"
+    format: json
+    fields:
+      - {label: "Einträge", name: "items", widget: "list", fields: [
+          {label: "Frage", name: "question", widget: "string"},
+          {label: "Antwort", name: "answer", widget: "text"}
+        ]}
+
+  - name: "downloads"
+    label: "Downloads"
+    file: "content/downloads.json"
+    format: json
+    fields:
+      - {label: "Einträge", name: "items", widget: "list", fields: [
+          {label: "Titel", name: "title", widget: "string"},
+          {label: "Beschreibung", name: "description", widget: "string"},
+          {label: "Dateipfad", name: "href", widget: "string"}
+        ]}

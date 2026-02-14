@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "title": "Mandantenfragebogen",
+      "description": "Ausgefüllt zum ersten Termin mitzubringen.",
+      "href": "/uploads/mandantenfragebogen.pdf"
+    },
+    {
+      "title": "Vollmacht",
+      "description": "Rechtsanwaltliche Vollmacht zur Bevollmächtigung.",
+      "href": "/uploads/vollmacht.pdf"
+    }
+  ]
+}
