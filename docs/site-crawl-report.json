@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-02-15T23:02:24.986Z",
+  "baseUrl": "https://laurisprojekt.netlify.app",
+  "routes": [
+    {
+      "url": "/",
+      "console": [],
+      "networkErrors": [],
+      "title": "Willkommen",
+      "landmarks": {
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true
+      },
+      "links": [
+        "/",
+        "/#leistungen",
+        "/termin-buchen",
+        "/faq",
+        "/downloads",
+        "/impressum",
+        "/datenschutz"
+      ]
+    },
+    {
+      "url": "/termin-buchen",
+      "console": [],
+      "networkErrors": [],
+      "title": "Termin buchen",
+      "landmarks": {
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true
+      },
+      "links": [
+        "/",
+        "/#leistungen",
+        "/termin-buchen",
+        "/faq",
+        "/downloads",
+        "/impressum",
+        "/datenschutz"
+      ]
+    },
+    {
+      "url": "/faq",
+      "console": [],
+      "networkErrors": [],
+      "title": "FAQ",
+      "landmarks": {
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true
+      },
+      "links": [
+        "/",
+        "/#leistungen",
+        "/termin-buchen",
+        "/faq",
+        "/downloads",
+        "/impressum",
+        "/datenschutz"
+      ]
+    },
+    {
+      "url": "/downloads",
+      "console": [],
+      "networkErrors": [],
+      "title": "Seite nicht gefunden",
+      "landmarks": {
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true
+      },
+      "links": [
+        "/",
+        "/#leistungen",
+        "/termin-buchen",
+        "/faq",
+        "/downloads",
+        "/impressum",
+        "/datenschutz"
+      ]
+    },
+    {
+      "url": "/impressum",
+      "console": [],
+      "networkErrors": [],
+      "title": "Seite nicht gefunden",
+      "landmarks": {
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true
+      },
+      "links": [
+        "/",
+        "/#leistungen",
+        "/termin-buchen",
+        "/faq",
+        "/downloads",
+        "/impressum",
+        "/datenschutz"
+      ]
+    },
+    {
+      "url": "/datenschutz",
+      "console": [],
+      "networkErrors": [],
+      "title": "Datenschutz",
+      "landmarks": {
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true
+      },
+      "links": [
+        "/",
+        "/#leistungen",
+        "/termin-buchen",
+        "/faq",
+        "/downloads",
+        "/impressum",
+        "/datenschutz"
+      ]
+    },
+    {
+      "url": "/admin",
+      "console": [],
+      "networkErrors": [],
+      "title": "Content Manager",
+      "landmarks": {
+        "header": false,
+        "nav": false,
+        "main": false,
+        "footer": false
+      },
+      "links": []
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "accessibilityIssues": 0
+  }
+}
