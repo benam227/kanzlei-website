@@ -1,15 +1,25 @@
 import matter from 'gray-matter';
 import type { MarkdownContent } from './types';
 
-const markdownModules = import.meta.glob('/content/*.md', { query: '?raw', import: 'default', eager: true });
+import homepageRaw from '../../../content/homepage.md?raw';
+import servicesRaw from '../../../content/services.md?raw';
+import impressumRaw from '../../../content/impressum.md?raw';
+import datenschutzRaw from '../../../content/datenschutz.md?raw';
 
-export function loadMarkdown(filename: string): MarkdownContent | null {
-  const path = `/content/${filename}.md`;
-  const raw = markdownModules[path] as string | undefined;
+function parseMarkdown(raw: string): MarkdownContent | null {
   if (!raw) return null;
-
   const { data, content } = matter(raw);
   return { ...data, content } as MarkdownContent;
+}
+
+export function loadMarkdown(filename: string): MarkdownContent | null {
+  switch (filename) {
+    case 'homepage': return parseMarkdown(homepageRaw);
+    case 'services': return parseMarkdown(servicesRaw);
+    case 'impressum': return parseMarkdown(impressumRaw);
+    case 'datenschutz': return parseMarkdown(datenschutzRaw);
+    default: return null;
+  }
 }
 
 export function loadHomepage() {
