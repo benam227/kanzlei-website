@@ -7,11 +7,6 @@
   NODE_VERSION = "20"
 
 [[redirects]]
-  from = "/.netlify/identity/callback"
-  to = "/admin/"
-  status = 302
-
-[[redirects]]
   from = "/admin/*"
   to = "/admin/:splat"
   status = 200
