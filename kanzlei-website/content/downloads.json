@@ -2,13 +2,18 @@
   "items": [
     {
       "title": "Mandantenfragebogen",
-      "description": "Ausgefüllt zum ersten Termin mitzubringen.",
+      "description": "Bitte füllen Sie diesen Fragebogen vor Ihrem ersten Termin aus.",
       "href": "/uploads/mandantenfragebogen.pdf"
     },
     {
       "title": "Vollmacht",
-      "description": "Rechtsanwaltliche Vollmacht zur Bevollmächtigung.",
+      "description": "Rechtsanwaltliche Vollmacht für die Vertretung im Migrationsverfahren.",
       "href": "/uploads/vollmacht.pdf"
+    },
+    {
+      "title": "Checkliste Asylverfahren",
+      "description": "Wichtige Dokumente und Informationen für Ihr Asylverfahren.",
+      "href": "/uploads/checkliste-asyl.pdf"
     }
   ]
 }

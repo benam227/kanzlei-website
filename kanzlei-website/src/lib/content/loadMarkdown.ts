@@ -1,3 +1,4 @@
+import * as yaml from 'js-yaml';
 import type { MarkdownContent } from './types';
 
 import homepageRaw from '../../../content/homepage.md?raw';
@@ -5,7 +6,7 @@ import servicesRaw from '../../../content/services.md?raw';
 import impressumRaw from '../../../content/impressum.md?raw';
 import datenschutzRaw from '../../../content/datenschutz.md?raw';
 
-function parseFrontmatter(raw: string): { data: Record<string, string>; content: string } {
+function parseFrontmatter(raw: string): { data: Record<string, unknown>; content: string } {
   if (!raw.startsWith('---\n')) {
     return { data: {}, content: raw };
   }
@@ -18,18 +19,12 @@ function parseFrontmatter(raw: string): { data: Record<string, string>; content:
   const frontmatter = raw.slice(4, endIndex);
   const content = raw.slice(endIndex + 5);
 
-  const data: Record<string, string> = {};
-  for (const line of frontmatter.split('\n')) {
-    const trimmed = line.trim();
-    if (!trimmed || trimmed.startsWith('#')) continue;
-    const colonIndex = trimmed.indexOf(':');
-    if (colonIndex === -1) continue;
-    const key = trimmed.slice(0, colonIndex).trim();
-    const value = trimmed.slice(colonIndex + 1).trim();
-    if (key) data[key] = value;
+  try {
+    const data = yaml.load(frontmatter) as Record<string, unknown>;
+    return { data, content };
+  } catch {
+    return { data: {}, content };
   }
-
-  return { data, content };
 }
 
 function parseMarkdown(raw: string): MarkdownContent | null {

@@ -6,7 +6,7 @@ import ConsentPreferences from '../components/ConsentPreferences';
 
 const navLinks = [
   { to: '/', label: 'Start' },
-  { to: '/#leistungen', label: 'Leistungen' },
+  { to: '/leistungen', label: 'Leistungen' },
   { to: '/termin-buchen', label: 'Termin buchen' },
   { to: '/faq', label: 'FAQ' },
   { to: '/downloads', label: 'Downloads' },

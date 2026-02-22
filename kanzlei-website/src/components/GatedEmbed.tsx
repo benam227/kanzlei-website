@@ -3,7 +3,7 @@ import { getConsent, setConsent } from '../lib/consent';
 
 interface GatedEmbedProps {
   title: string;
-  type: 'acuity' | 'youtube';
+  type: 'cal' | 'acuity' | 'youtube';
   embedUrl: string;
   height?: number;
 }
@@ -42,7 +42,7 @@ export default function GatedEmbed({ title, type, embedUrl, height = 500 }: Gate
     );
   }
 
-  const description = type === 'acuity' 
+  const description = (type === 'cal' || type === 'acuity')
     ? 'Um diesen Service zu nutzen, müssen Sie der Verwendung externer Inhalte zustimmen.'
     : 'Um dieses Video anzusehen, müssen Sie der Verwendung externer Inhalte zustimmen.';
 
