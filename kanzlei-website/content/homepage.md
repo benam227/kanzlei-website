@@ -1,8 +1,9 @@
 ---
-title: Willkommen
+title: Willkommen Alex
 description: Ihre kompetente Rechtsanwaltskanzlei für alle juristischen Fragen.
 heroTitle: Ihre Rechtsanwaltskanzlei für kompetente Beratung
-heroSubtitle: Wir stehen Ihnen mit fundierter rechtlicher Expertise und persönlicher Betreuung zur Seite.
+heroSubtitle: Wir stehen Ihnen mit fundierter rechtlicher Expertise und
+  persönlicher Betreuung zur Seite.
 ctaText: Termin buchen
 ---
 
