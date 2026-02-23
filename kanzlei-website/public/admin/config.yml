@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "public/uploads"
+media_folder: "kanzlei-website/public/uploads"
 public_folder: "/uploads"
 
 collections:
@@ -11,7 +11,7 @@ collections:
     files:
       - name: "homepage"
         label: "Homepage"
-        file: "content/homepage.md"
+        file: "kanzlei-website/content/homepage.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Beschreibung", name: "description", widget: "string", required: false }
@@ -22,7 +22,7 @@ collections:
 
       - name: "services"
         label: "Leistungen"
-        file: "content/services.md"
+        file: "kanzlei-website/content/services.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Beschreibung", name: "description", widget: "string", required: false }
@@ -34,7 +34,7 @@ collections:
 
       - name: "impressum"
         label: "Impressum"
-        file: "content/impressum.md"
+        file: "kanzlei-website/content/impressum.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Beschreibung", name: "description", widget: "string", required: false }
@@ -42,7 +42,7 @@ collections:
 
       - name: "datenschutz"
         label: "Datenschutz"
-        file: "content/datenschutz.md"
+        file: "kanzlei-website/content/datenschutz.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Beschreibung", name: "description", widget: "string", required: false }
@@ -53,7 +53,7 @@ collections:
     files:
       - name: "faq"
         label: "FAQ"
-        file: "content/faq.json"
+        file: "kanzlei-website/content/faq.json"
         format: "json"
         fields:
           - label: "Einträge"
@@ -65,7 +65,7 @@ collections:
 
       - name: "downloads"
         label: "Downloads"
-        file: "content/downloads.json"
+        file: "kanzlei-website/content/downloads.json"
         format: "json"
         fields:
           - label: "Einträge"
