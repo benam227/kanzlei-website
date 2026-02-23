@@ -1,6 +1,6 @@
 ---
-title: Willkommen Alex
-description: Ihre kompetente Rechtsanwaltskanzlei für alle juristischen Fragen.
+title: Willkommen
+description: Ihre kompetente Rechtsanwaltskanzlei für Alex.
 heroTitle: Ihre Rechtsanwaltskanzlei für kompetente Beratung
 heroSubtitle: Wir stehen Ihnen mit fundierter rechtlicher Expertise und
   persönlicher Betreuung zur Seite.
