@@ -1,5 +1,6 @@
 import { usePageMeta } from '../lib/usePageMeta';
 import GatedEmbed from '../components/GatedEmbed';
+import PageContainer from '../components/PageContainer';
 
 const calEmbedUrl = import.meta.env.VITE_CALEMBED_URL?.trim().replace(/^["']|["']$/g, '');
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL;
@@ -12,25 +13,25 @@ export default function TerminPage() {
   });
 
   return (
-    <div className="bg-[#1a365d] text-white py-12">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-6">Termin buchen</h1>
+    <div className="bg-gray-50 py-12">
+      <PageContainer>
+        <h1 className="text-4xl font-bold mb-6 text-[#1a365d]">Termin buchen</h1>
         
-        <p className="text-lg text-gray-200 mb-6">
+        <p className="text-lg text-gray-600 mb-6">
           Vereinbaren Sie Ihren Beratungstermin bequem online über unser Buchungssystem. 
           Die Terminbuchung wird über den externen Dienstleister Cal.eu abgewickelt.
         </p>
-        <p className="text-lg text-gray-200 mb-8">
+        <p className="text-lg text-gray-600 mb-8">
           Die Zahlung bzw. Anzahlung erfolgt direkt innerhalb von Cal.eu. 
           Auf unserer Website werden keine Zahlungsdaten erfasst oder verarbeitet.
         </p>
 
         <div 
           role="note" 
-          className="bg-white/10 border border-white/20 rounded-lg p-4 mb-8"
+          className="bg-gray-100 border border-gray-200 rounded-lg p-4 mb-8"
         >
           <p className="font-semibold mb-2">Hinweis:</p>
-          <ul className="list-disc list-inside space-y-1 text-gray-200">
+          <ul className="list-disc list-inside space-y-1 text-gray-600">
             <li>Externer Dienst: Cal.eu</li>
             <li>Zahlung/Anzahlung erfolgt innerhalb von Cal.eu</li>
             <li>Externe Inhalte werden erst nach Zustimmung geladen</li>
@@ -45,7 +46,7 @@ export default function TerminPage() {
             height={800}
           />
         ) : (
-          <div className="bg-white/10 border border-white/20 rounded-lg p-8 text-center">
+          <div className="bg-gray-100 border border-gray-200 rounded-lg p-8 text-center">
             <p className="text-lg mb-4">
               Das Buchungssystem ist derzeit nicht konfiguriert.
             </p>
@@ -58,7 +59,7 @@ export default function TerminPage() {
             )}
           </div>
         )}
-      </div>
+      </PageContainer>
     </div>
   );
 }

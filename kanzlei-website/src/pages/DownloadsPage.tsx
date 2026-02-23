@@ -1,5 +1,6 @@
 import { usePageMeta } from '../lib/usePageMeta';
 import { loadDownloads } from '../lib/content';
+import PageContainer from '../components/PageContainer';
 
 export default function DownloadsPage() {
   const downloads = loadDownloads();
@@ -10,29 +11,29 @@ export default function DownloadsPage() {
   });
 
   return (
-    <div className="bg-[#1a365d] text-white py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl font-bold">Downloads</h1>
+    <div className="bg-gray-50 py-12">
+      <PageContainer>
+        <h1 className="text-4xl font-bold mb-8 text-[#1a365d]">Downloads</h1>
         {downloads.length > 0 ? (
-          <ul className="mt-6 space-y-4">
+          <ul className="space-y-4">
             {downloads.map((item, index) => (
-              <li key={index} className="bg-white/10 rounded-lg p-4">
+              <li key={index} className="bg-white rounded-lg p-4 shadow-sm">
                 <a
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block hover:bg-white/20 transition-colors rounded p-2 -m-2"
+                  className="block hover:bg-gray-50 transition-colors rounded p-2 -m-2"
                 >
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="text-gray-300">{item.description}</p>
+                  <h3 className="text-lg font-semibold text-[#1a365d]">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
                 </a>
               </li>
             ))}
           </ul>
         ) : (
-          <p className="mt-4 text-xl">Keine Downloads verfügbar.</p>
+          <p className="text-xl text-gray-600">Keine Downloads verfügbar.</p>
         )}
-      </div>
+      </PageContainer>
     </div>
   );
 }
