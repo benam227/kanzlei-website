@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "title": "Asylrecht",
+      "text": "Beratung und Vertretung im gesamten Asylverfahren, einschließlich Erst- und Folgeanträgen, Abschiebeschutz, Dublin-Verfahren sowie Familiennachzug nach anerkanntem Schutzstatus.",
+      "href": "/leistungen#asylrecht"
+    },
+    {
+      "title": "Aufenthaltsrecht",
+      "text": "Unterstützung bei allen Fragen zum Aufenthaltsrecht: Aufenthaltstitel, Verlängerungen, Niederlassungserlaubnis, Blaue Karte EU, Arbeitsaufenthalte und Familiennachzug.",
+      "href": "/leistungen#aufenthalt"
+    },
+    {
+      "title": "Staatsangehörigkeitsrecht",
+      "text": "Begleitung bei Einbürgerungsverfahren, Prüfung der Einbürgerungsvoraussetzungen, Staatenlosigkeit und Optionspflicht nach § 29 StAG.",
+      "href": "/leistungen#staatsangehoerigkeit"
+    }
+  ]
+}

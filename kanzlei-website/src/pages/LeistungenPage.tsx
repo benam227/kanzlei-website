@@ -18,9 +18,9 @@ export default function LeistungenPage() {
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white/10 rounded-lg p-8 hover:bg-white/15 transition-colors">
+            <div key={index} id={service.href.replace('/leistungen#', '')} className="bg-white/10 rounded-lg p-8 hover:bg-white/15 transition-colors">
               <h2 className="text-2xl font-semibold mb-4">{service.title}</h2>
-              <p className="text-gray-200">{service.description}</p>
+              <p className="text-gray-200">{service.text}</p>
             </div>
           ))}
         </div>

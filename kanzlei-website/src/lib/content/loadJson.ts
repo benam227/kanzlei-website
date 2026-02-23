@@ -1,7 +1,8 @@
-import type { FAQItem, DownloadItem, FAQData, DownloadsData, FooterData } from './types';
+import type { FAQItem, DownloadItem, FAQData, DownloadsData, FooterData, ServiceItem, ServicesData } from './types';
 import faqData from '../../../content/faq.json';
 import downloadsData from '../../../content/downloads.json';
 import footerData from '../../../content/footer.json';
+import servicesData from '../../../content/services.json';
 
 export function loadFAQ(): FAQItem[] {
   const data = faqData as FAQData;
@@ -15,4 +16,9 @@ export function loadDownloads(): DownloadItem[] {
 
 export function loadFooter(): FooterData {
   return footerData as FooterData;
+}
+
+export function loadServices(): ServiceItem[] {
+  const data = servicesData as ServicesData;
+  return data.items || [];
 }

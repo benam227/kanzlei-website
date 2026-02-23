@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import { usePageMeta } from '../lib/usePageMeta';
 import { loadHomepage, loadServices } from '../lib/content';
-import type { MarkdownContent } from '../lib/content/types';
 
 export default function HomePage() {
   const homepage = loadHomepage();
-  const services = loadServices() as MarkdownContent['services'] || [];
+  const services = loadServices();
 
   usePageMeta({
     title: homepage?.title || 'Willkommen',
@@ -38,7 +37,12 @@ export default function HomePage() {
             {services.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-600">{service.text}</p>
+                {service.href && (
+                  <Link to={service.href} className="inline-block mt-3 text-[#1a365d] hover:underline">
+                    Mehr →
+                  </Link>
+                )}
               </div>
             ))}
           </div>

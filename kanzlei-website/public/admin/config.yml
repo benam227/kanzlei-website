@@ -76,6 +76,19 @@ collections:
               - { label: "Beschreibung", name: "description", widget: "string", required: false }
               - { label: "Dateipfad", name: "href", widget: "string" }
 
+      - name: "services"
+        label: "Leistungen"
+        file: "kanzlei-website/content/services.json"
+        format: "json"
+        fields:
+          - label: "Leistungen"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "text", widget: "text" }
+              - { label: "Link", name: "href", widget: "string", required: false }
+
       - name: "footer"
         label: "Footer"
         file: "kanzlei-website/content/footer.json"

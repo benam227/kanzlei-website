@@ -30,6 +30,16 @@ export interface DownloadsData {
   items: DownloadItem[];
 }
 
+export interface ServiceItem {
+  title: string;
+  text: string;
+  href: string;
+}
+
+export interface ServicesData {
+  items: ServiceItem[];
+}
+
 export interface FooterLink {
   label: string;
   href: string;
