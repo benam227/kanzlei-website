@@ -75,3 +75,20 @@ collections:
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Beschreibung", name: "description", widget: "string", required: false }
               - { label: "Dateipfad", name: "href", widget: "string" }
+
+      - name: "footer"
+        label: "Footer"
+        file: "kanzlei-website/content/footer.json"
+        format: "json"
+        fields:
+          - { label: "Firmenname", name: "companyName", widget: "string" }
+          - { label: "Adresszeilen", name: "addressLines", widget: "list" }
+          - { label: "E-Mail", name: "email", widget: "string", required: false }
+          - { label: "Telefon", name: "phone", widget: "string", required: false }
+          - { label: "Fußnotentext", name: "footerNote", widget: "string", required: false }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }

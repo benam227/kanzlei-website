@@ -29,3 +29,17 @@ export interface DownloadItem {
 export interface DownloadsData {
   items: DownloadItem[];
 }
+
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+export interface FooterData {
+  companyName: string;
+  addressLines: string[];
+  email?: string;
+  phone?: string;
+  footerNote?: string;
+  links: FooterLink[];
+}

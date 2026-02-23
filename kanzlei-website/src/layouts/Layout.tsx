@@ -3,6 +3,7 @@ import { Outlet, Link, NavLink } from 'react-router-dom';
 import FloatingCTA from '../components/FloatingCTA';
 import ConsentBanner from '../components/ConsentBanner';
 import ConsentPreferences from '../components/ConsentPreferences';
+import { loadFooter } from '../lib/content/loadJson';
 
 const navLinks = [
   { to: '/', label: 'Start' },
@@ -10,12 +11,11 @@ const navLinks = [
   { to: '/termin-buchen', label: 'Termin buchen' },
   { to: '/faq', label: 'FAQ' },
   { to: '/downloads', label: 'Downloads' },
-  { to: '/impressum', label: 'Impressum' },
-  { to: '/datenschutz', label: 'Datenschutz' },
 ];
 
 export default function Layout() {
   const [preferencesOpen, setPreferencesOpen] = useState(false);
+  const footer = loadFooter();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -55,23 +55,37 @@ export default function Layout() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">Kanzlei Recht</h3>
+              <h3 className="font-bold text-lg mb-4">{footer.companyName || 'Kanzlei Recht'}</h3>
               <p className="text-gray-400">
-                Ihre kompetente Rechtsberatung
+                {footer.footerNote || 'Ihre kompetente Rechtsberatung'}
               </p>
+              {footer.addressLines.length > 0 && footer.addressLines[0] && (
+                <p className="text-gray-400 mt-2">
+                  {footer.addressLines.map((line) => (
+                    <span key={line}>
+                      {line}<br />
+                    </span>
+                  ))}
+                </p>
+              )}
             </div>
             <div>
               <h4 className="font-semibold mb-4">Kontakt</h4>
               <p className="text-gray-400">
-                Telefon: +49 123 456789<br />
-                E-Mail: info@kanzlei-recht.de
+                {footer.phone && <>Telefon: {footer.phone}<br /></>}
+                {footer.email && <>E-Mail: <a href={`mailto:${footer.email}`} className="hover:text-white">{footer.email}</a></>}
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Rechtliches</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link to="/impressum" className="hover:text-white focus-visible:outline-2 focus-visible:outline-white rounded">Impressum</Link></li>
-                <li><Link to="/datenschutz" className="hover:text-white focus-visible:outline-2 focus-visible:outline-white rounded">Datenschutz</Link></li>
+                {footer.links.map((link) => (
+                  <li key={link.href}>
+                    <Link to={link.href} className="hover:text-white focus-visible:outline-2 focus-visible:outline-white rounded">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
                 <li>
                   <button 
                     onClick={() => setPreferencesOpen(true)}
@@ -84,7 +98,7 @@ export default function Layout() {
             </div>
           </div>
           <div className="mt-8 pt-4 border-t border-gray-700 text-center text-gray-400 text-sm">
-            © {new Date().getFullYear()} Kanzlei Recht. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} {footer.companyName || 'Kanzlei Recht'}. Alle Rechte vorbehalten.
           </div>
         </div>
       </footer>

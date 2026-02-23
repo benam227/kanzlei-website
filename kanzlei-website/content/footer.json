@@ -1,0 +1,11 @@
+{
+  "companyName": "",
+  "addressLines": ["", ""],
+  "email": "",
+  "phone": "",
+  "footerNote": "",
+  "links": [
+    { "label": "Impressum", "href": "/impressum" },
+    { "label": "Datenschutz", "href": "/datenschutz" }
+  ]
+}
