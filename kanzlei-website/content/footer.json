@@ -1,11 +1,20 @@
 {
-  "companyName": "",
-  "addressLines": ["", ""],
+  "companyName": "LAURILAW",
+  "addressLines": [
+    "",
+    ""
+  ],
   "email": "",
   "phone": "",
   "footerNote": "",
   "links": [
-    { "label": "Impressum", "href": "/impressum" },
-    { "label": "Datenschutz", "href": "/datenschutz" }
+    {
+      "label": "Impressum",
+      "href": "/impressum"
+    },
+    {
+      "label": "Datenschutz",
+      "href": "/datenschutz"
+    }
   ]
 }
