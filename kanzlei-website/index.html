@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Ihre kompetente Rechtsanwaltskanzlei für alle juristischen Fragen." />
     <title>Kanzlei Recht</title>
+    <script>
+      (function() {
+        var h = location.hash;
+        if (h && !location.pathname.startsWith('/admin') && 
+            (h.includes('invite_token') || h.includes('recovery_token') || h.includes('confirmation_token'))) {
+          location.replace('/admin/' + h);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
