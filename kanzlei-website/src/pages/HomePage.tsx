@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 import { usePageMeta } from '../lib/usePageMeta';
 import { loadHomepage, loadServices } from '../lib/content';
 
@@ -29,6 +30,14 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      {homepage?.content && (
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-4 prose prose-lg">
+            <ReactMarkdown>{homepage.content}</ReactMarkdown>
+          </div>
+        </section>
+      )}
 
       <section id="leistungen" className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
