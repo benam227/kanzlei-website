@@ -11,7 +11,7 @@
         var h = location.hash;
         if (h && !location.pathname.startsWith('/admin') && 
             (h.includes('invite_token') || h.includes('recovery_token') || h.includes('confirmation_token'))) {
-          location.replace('/admin/' + h);
+          location.replace('/admin/#/' + h);
         }
       })();
     </script>
