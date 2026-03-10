@@ -39,7 +39,7 @@ export default function GatedEmbed({ title, type, embedUrl, originalUrl, height 
             title={title}
             className="absolute top-0 left-0 w-full h-full"
             loading="lazy"
-            referrerPolicy="no-referrer"
+            referrerPolicy="strict-origin-when-cross-origin"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
@@ -55,7 +55,7 @@ export default function GatedEmbed({ title, type, embedUrl, originalUrl, height 
         height={height}
         style={{ border: 'none' }}
         loading="lazy"
-        referrerPolicy="no-referrer"
+        referrerPolicy="strict-origin-when-cross-origin"
         allow="payment"
       />
     );

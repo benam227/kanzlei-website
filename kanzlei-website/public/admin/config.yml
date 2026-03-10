@@ -22,15 +22,17 @@ collections:
 
       - name: "services"
         label: "Leistungen"
-        file: "kanzlei-website/content/services.md"
+        file: "kanzlei-website/content/services.json"
+        format: "json"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Beschreibung", name: "description", widget: "string", required: false }
-          - { label: "Leistungen", name: "services", widget: "list", fields: [
-              { label: "Titel", name: "title", widget: "string" },
-              { label: "Beschreibung", name: "description", widget: "text" }
-            ], required: false }
-          - { label: "Inhalt", name: "body", widget: "markdown" }
+          - label: "Leistungen"
+            name: "items"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "text", widget: "text" }
+              - { label: "Link", name: "href", widget: "string", required: false }
 
       - name: "about"
         label: "Über mich"
