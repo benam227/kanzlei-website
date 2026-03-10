@@ -89,14 +89,12 @@ export interface SiteSettingsPage {
 }
 
 export interface SiteSettings {
-  pages: {
-    home?: SiteSettingsPage;
-    services?: SiteSettingsPage;
-    about?: SiteSettingsPage;
-    booking?: SiteSettingsPage;
-    faq?: SiteSettingsPage;
-    downloads?: SiteSettingsPage;
-  };
+  home?: SiteSettingsPage;
+  services?: SiteSettingsPage;
+  about?: SiteSettingsPage;
+  booking?: SiteSettingsPage;
+  faq?: SiteSettingsPage;
+  downloads?: SiteSettingsPage;
 }
 
 export function loadSiteSettings(): SiteSettings {
@@ -114,23 +112,23 @@ export function loadNavItems(): NavItem[] {
   const settings = loadSiteSettings();
   const items: NavItem[] = [];
   
-  if (settings.pages.home?.enabled) {
-    items.push({ to: '/', label: settings.pages.home.navLabel || 'Start', enabled: true, order: settings.pages.home.navOrder || 1 });
+  if (settings.home?.enabled) {
+    items.push({ to: '/', label: settings.home.navLabel || 'Start', enabled: true, order: settings.home.navOrder || 1 });
   }
-  if (settings.pages.services?.enabled) {
-    items.push({ to: '/leistungen', label: settings.pages.services.navLabel || 'Leistungen', enabled: true, order: settings.pages.services.navOrder || 2 });
+  if (settings.services?.enabled) {
+    items.push({ to: '/leistungen', label: settings.services.navLabel || 'Leistungen', enabled: true, order: settings.services.navOrder || 2 });
   }
-  if (settings.pages.about?.enabled) {
-    items.push({ to: '/ueber-mich', label: settings.pages.about.navLabel || 'Über mich', enabled: true, order: settings.pages.about.navOrder || 3 });
+  if (settings.about?.enabled) {
+    items.push({ to: '/ueber-mich', label: settings.about.navLabel || 'Über mich', enabled: true, order: settings.about.navOrder || 3 });
   }
-  if (settings.pages.booking?.enabled) {
-    items.push({ to: '/termin-buchen', label: settings.pages.booking.navLabel || 'Termin buchen', enabled: true, order: settings.pages.booking.navOrder || 4 });
+  if (settings.booking?.enabled) {
+    items.push({ to: '/termin-buchen', label: settings.booking.navLabel || 'Termin buchen', enabled: true, order: settings.booking.navOrder || 4 });
   }
-  if (settings.pages.faq?.enabled) {
-    items.push({ to: '/faq', label: settings.pages.faq.navLabel || 'FAQ', enabled: true, order: settings.pages.faq.navOrder || 5 });
+  if (settings.faq?.enabled) {
+    items.push({ to: '/faq', label: settings.faq.navLabel || 'FAQ', enabled: true, order: settings.faq.navOrder || 5 });
   }
-  if (settings.pages.downloads?.enabled) {
-    items.push({ to: '/downloads', label: settings.pages.downloads.navLabel || 'Downloads', enabled: true, order: settings.pages.downloads.navOrder || 6 });
+  if (settings.downloads?.enabled) {
+    items.push({ to: '/downloads', label: settings.downloads.navLabel || 'Downloads', enabled: true, order: settings.downloads.navOrder || 6 });
   }
   
   return items.sort((a, b) => a.order - b.order);
