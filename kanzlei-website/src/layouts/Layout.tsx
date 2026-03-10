@@ -3,20 +3,13 @@ import { Outlet, Link, NavLink } from 'react-router-dom';
 import FloatingCTA from '../components/FloatingCTA';
 import ConsentBanner from '../components/ConsentBanner';
 import ConsentPreferences from '../components/ConsentPreferences';
-import { loadFooter } from '../lib/content/loadJson';
-
-const navLinks = [
-  { to: '/', label: 'Start' },
-  { to: '/leistungen', label: 'Leistungen' },
-  { to: '/termin-buchen', label: 'Termin buchen' },
-  { to: '/faq', label: 'FAQ' },
-  { to: '/downloads', label: 'Downloads' },
-];
+import { loadFooter, loadNavItems } from '../lib/content';
 
 export default function Layout() {
   const [preferencesOpen, setPreferencesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const footer = loadFooter();
+  const navLinks = loadNavItems();
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 

@@ -105,3 +105,84 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "href", widget: "string" }
+
+      - name: "homepage"
+        label: "Homepage Einstellungen"
+        file: "kanzlei-website/content/homepage.json"
+        format: "json"
+        fields:
+          - { label: "Hero Titel", name: "heroTitle", widget: "string" }
+          - { label: "Hero Untertitel", name: "heroSubtitle", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "string" }
+          - { label: "Einleitungstext", name: "introText", widget: "text", required: false }
+          - { label: "Leistungen Titel", name: "servicesTitle", widget: "string" }
+          - { label: "Leistungen Einleitung", name: "servicesIntro", widget: "text", required: false }
+          - { label: "Kontakt Titel", name: "contactTitle", widget: "string" }
+          - { label: "Kontakt Einleitung", name: "contactIntro", widget: "text", required: false }
+          - { label: "YouTube Titel", name: "youtubeTitle", widget: "string", required: false }
+          - { label: "YouTube Einleitung", name: "youtubeIntro", widget: "text", required: false }
+          - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+
+      - name: "about"
+        label: "Über mich"
+        file: "kanzlei-website/content/about.json"
+        format: "json"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Einleitung", name: "intro", widget: "text", required: false }
+          - { label: "Biografie", name: "bio", widget: "text", required: false }
+          - label: "Vita / Meilensteine"
+            name: "vita"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+          - { label: "YouTube Titel", name: "youtubeTitle", widget: "string", required: false }
+          - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+
+      - name: "siteSettings"
+        label: "Seiten Einstellungen"
+        file: "kanzlei-website/content/siteSettings.json"
+        format: "json"
+        fields:
+          - label: "Startseite"
+            name: "home"
+            widget: "object"
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Start" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 1 }
+          - label: "Leistungen"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Leistungen" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 2 }
+          - label: "Über mich"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Über mich" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 3 }
+          - label: "Termin buchen"
+            name: "booking"
+            widget: "object"
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Termin buchen" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 4 }
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "FAQ" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 5 }
+          - label: "Downloads"
+            name: "downloads"
+            widget: "object"
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Downloads" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 6 }

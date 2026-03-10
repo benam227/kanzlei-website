@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import HomePage from './pages/HomePage';
 import LeistungenPage from './pages/LeistungenPage';
+import AboutPage from './pages/AboutPage';
 import TerminPage from './pages/TerminPage';
 import FAQPage from './pages/FAQPage';
 import DownloadsPage from './pages/DownloadsPage';
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="leistungen" element={<LeistungenPage />} />
+          <Route path="ueber-mich" element={<AboutPage />} />
           <Route path="termin-buchen" element={<TerminPage />} />
           <Route path="faq" element={<FAQPage />} />
           <Route path="downloads" element={<DownloadsPage />} />

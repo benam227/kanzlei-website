@@ -53,3 +53,41 @@ export interface FooterData {
   footerNote?: string;
   links: FooterLink[];
 }
+
+export interface HomepageData {
+  heroTitle?: string;
+  heroSubtitle?: string;
+  ctaText?: string;
+  introText?: string;
+  servicesTitle?: string;
+  servicesIntro?: string;
+  contactTitle?: string;
+  contactIntro?: string;
+  youtubeTitle?: string;
+  youtubeIntro?: string;
+  youtubeUrl?: string;
+}
+
+export interface SiteSettingsPage {
+  enabled: boolean;
+  navLabel: string;
+  navOrder: number;
+}
+
+export interface SiteSettings {
+  pages: {
+    home?: SiteSettingsPage;
+    services?: SiteSettingsPage;
+    about?: SiteSettingsPage;
+    booking?: SiteSettingsPage;
+    faq?: SiteSettingsPage;
+    downloads?: SiteSettingsPage;
+  };
+}
+
+export interface NavItem {
+  to: string;
+  label: string;
+  enabled: boolean;
+  order: number;
+}

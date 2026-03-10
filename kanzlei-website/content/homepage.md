@@ -1,9 +1,6 @@
 ---
 title: Willkommen
 description: Ihre kompetente Rechtsanwaltskanzlei für alle juristischen Fragen.
-heroTitle: Ihre Rechtsanwaltskanzlei für kompetente Beratung
-heroSubtitle: Wir stehen Ihnen mit fundierter rechtlicher Expertise und
-  persönlicher Betreuung zur Seite.
-ctaText: " Jetzt Termin buchen"
 ---
-Herzlich willkommen bei Kanzlei Recht.
+
+Die Startseite wird nun über die strukturierten CMS-Felder in homepage.json gesteuert.
