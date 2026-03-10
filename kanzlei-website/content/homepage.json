@@ -1,15 +1,15 @@
 {
-  "heroTitle": "Ihre Rechtsanwaltskanzlei für kompetente Beratung",
+  "youtubeIntro": "Erfahren Sie mehr über unsere Kanzlei in diesem kurzen Video.",
+  "contactIntro": "Rufen Sie uns an oder buchen Sie online einen Beratungstermin.",
+  "youtubeUrl": "https://www.youtube.com/watch?v=ZXYHPlY_pmc",
+  "servicesIntro": "Wir beraten Sie kompetent in verschiedenen Rechtsgebieten.",
+  "headerImage": "/uploads/wesley-tingey-kjgkqqcdynq-unsplash.jpg",
   "heroSubtitle": "Wir stehen Ihnen mit fundierter rechtlicher Expertise und persönlicher Betreuung zur Seite.",
-  "ctaText": "Jetzt Termin buchen",
+  "youtubeTitle": "Lernen Sie uns kennen",
+  "contactTitle": "Vereinbaren Sie einen Termin",
   "introText": "Herzlich willkommen bei Kanzlei Recht. Wir bieten Ihnen professionelle rechtliche Beratung in allen wichtigen Rechtsgebieten.",
   "servicesTitle": "Unsere Leistungen",
-  "servicesIntro": "Wir beraten Sie kompetent in verschiedenen Rechtsgebieten.",
-  "contactTitle": "Vereinbaren Sie einen Termin",
-  "contactIntro": "Rufen Sie uns an oder buchen Sie online einen Beratungstermin.",
-  "youtubeTitle": "Lernen Sie uns kennen",
-  "youtubeIntro": "Erfahren Sie mehr über unsere Kanzlei in diesem kurzen Video.",
-  "youtubeUrl": "",
-  "headerImage": "",
-  "headerImageAlt": ""
+  "headerImageAlt": "",
+  "ctaText": "Jetzt Termin buchen",
+  "heroTitle": "Ihre Rechtsanwaltskanzlei für kompetente Beratung"
 }
