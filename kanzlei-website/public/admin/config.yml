@@ -122,6 +122,8 @@ collections:
           - { label: "YouTube Titel", name: "youtubeTitle", widget: "string", required: false }
           - { label: "YouTube Einleitung", name: "youtubeIntro", widget: "text", required: false }
           - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+          - { label: "Header Bild", name: "headerImage", widget: "image", required: false }
+          - { label: "Header Bild Alt Text", name: "headerImageAlt", widget: "string", required: false }
 
       - name: "about"
         label: "Über mich"
@@ -138,6 +140,8 @@ collections:
               - { label: "Text", name: "text", widget: "string" }
           - { label: "YouTube Titel", name: "youtubeTitle", widget: "string", required: false }
           - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+          - { label: "Header Bild", name: "headerImage", widget: "image", required: false }
+          - { label: "Header Bild Alt Text", name: "headerImageAlt", widget: "string", required: false }
 
       - name: "siteSettings"
         label: "Seiten Einstellungen"
