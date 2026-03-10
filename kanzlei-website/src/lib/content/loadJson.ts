@@ -44,35 +44,42 @@ export function loadHomepageJson(): HomepageData {
 }
 
 /**
- * Converts YouTube URL to embed URL
+ * Extracts YouTube video ID from various URL formats
+ * Supports: youtube.com/watch?v=ID, youtu.be/ID, youtube.com/embed/ID
+ * Returns null if no valid ID found
+ */
+export function parseYouTubeId(url: string | undefined): string | null {
+  if (!url || url.trim() === '') return null;
+  
+  const trimmedUrl = url.trim();
+  
+  // youtube.com/embed/ID
+  const embedMatch = trimmedUrl.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/);
+  if (embedMatch) return embedMatch[1];
+  
+  // youtu.be/ID short URL
+  const shortMatch = trimmedUrl.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/);
+  if (shortMatch) return shortMatch[1];
+  
+  // youtube.com/watch?v=ID
+  const watchMatch = trimmedUrl.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/);
+  if (watchMatch) return watchMatch[1];
+  
+  return null;
+}
+
+/**
+ * Converts YouTube URL to embed URL using privacy-enhanced youtube-nocookie.com
  * Supports: https://www.youtube.com/watch?v=VIDEO_ID
  *           https://youtu.be/VIDEO_ID
  *           https://www.youtube.com/embed/VIDEO_ID
  * Returns null if URL is empty or invalid
  */
 export function toYouTubeEmbedUrl(url: string | undefined): string | null {
-  if (!url || url.trim() === '') return null;
+  const videoId = parseYouTubeId(url);
+  if (!videoId) return null;
   
-  const trimmedUrl = url.trim();
-  
-  // Already embed URL
-  if (trimmedUrl.includes('/embed/')) {
-    return trimmedUrl;
-  }
-  
-  // youtu.be short URL
-  const shortMatch = trimmedUrl.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/);
-  if (shortMatch) {
-    return `https://www.youtube.com/embed/${shortMatch[1]}`;
-  }
-  
-  // youtube.com/watch?v= URL
-  const watchMatch = trimmedUrl.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/);
-  if (watchMatch) {
-    return `https://www.youtube.com/embed/${watchMatch[1]}`;
-  }
-  
-  return null;
+  return `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`;
 }
 
 export interface SiteSettingsPage {

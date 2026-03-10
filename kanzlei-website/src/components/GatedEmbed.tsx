@@ -5,11 +5,30 @@ interface GatedEmbedProps {
   title: string;
   type: 'cal' | 'acuity' | 'youtube';
   embedUrl: string;
+  originalUrl?: string;
   height?: number;
 }
 
-export default function GatedEmbed({ title, type, embedUrl, height = 500 }: GatedEmbedProps) {
+export default function GatedEmbed({ title, type, embedUrl, originalUrl, height = 500 }: GatedEmbedProps) {
   const [hasConsent, setHasConsent] = useState(() => getConsent().externalMedia);
+
+  // Show fallback link if YouTube URL is invalid
+  if (type === 'youtube' && !embedUrl && originalUrl) {
+    return (
+      <div className="bg-gray-100 rounded-lg p-8 text-center">
+        <h3 className="text-lg font-semibold mb-2">{title}</h3>
+        <p className="text-gray-600 mb-4">Das Video konnte nicht geladen werden.</p>
+        <a
+          href={originalUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 bg-[#1a365d] text-white rounded hover:bg-[#2d4a7c]"
+        >
+          Video auf YouTube ansehen
+        </a>
+      </div>
+    );
+  }
 
   if (hasConsent) {
     if (type === 'youtube') {
@@ -21,7 +40,7 @@ export default function GatedEmbed({ title, type, embedUrl, height = 500 }: Gate
             className="absolute top-0 left-0 w-full h-full"
             loading="lazy"
             referrerPolicy="no-referrer"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
         </div>
