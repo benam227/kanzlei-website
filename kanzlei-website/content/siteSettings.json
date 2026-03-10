@@ -1,6 +1,6 @@
 {
   "home": {
-    "enabled": false,
+    "enabled": true,
     "navLabel": "Start",
     "navOrder": 1
   },
