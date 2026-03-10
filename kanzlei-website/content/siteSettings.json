@@ -1,8 +1,32 @@
 {
-  "home": { "enabled": true, "navLabel": "Start", "navOrder": 1 },
-  "services": { "enabled": true, "navLabel": "Leistungen", "navOrder": 2 },
-  "about": { "enabled": true, "navLabel": "Über mich", "navOrder": 3 },
-  "booking": { "enabled": true, "navLabel": "Termin buchen", "navOrder": 4 },
-  "faq": { "enabled": true, "navLabel": "FAQ", "navOrder": 5 },
-  "downloads": { "enabled": true, "navLabel": "Downloads", "navOrder": 6 }
+  "home": {
+    "enabled": false,
+    "navLabel": "Start",
+    "navOrder": 1
+  },
+  "services": {
+    "enabled": true,
+    "navLabel": "Leistungen",
+    "navOrder": 2
+  },
+  "about": {
+    "enabled": true,
+    "navLabel": "Über mich",
+    "navOrder": 3
+  },
+  "booking": {
+    "enabled": true,
+    "navLabel": "Termin buchen",
+    "navOrder": 4
+  },
+  "faq": {
+    "enabled": true,
+    "navLabel": "FAQ",
+    "navOrder": 5
+  },
+  "downloads": {
+    "enabled": true,
+    "navLabel": "Downloads",
+    "navOrder": 6
+  }
 }
