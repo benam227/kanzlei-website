@@ -47,6 +47,7 @@ export default function GatedEmbed({ title, type, embedUrl, originalUrl, height 
       );
     }
     
+    // Cal/Acuity - use no-referrer (required for proper functioning)
     return (
       <iframe
         src={embedUrl}
@@ -55,7 +56,7 @@ export default function GatedEmbed({ title, type, embedUrl, originalUrl, height 
         height={height}
         style={{ border: 'none' }}
         loading="lazy"
-        referrerPolicy="strict-origin-when-cross-origin"
+        referrerPolicy="no-referrer"
         allow="payment"
       />
     );
