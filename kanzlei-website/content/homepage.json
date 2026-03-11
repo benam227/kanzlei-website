@@ -1,18 +1,25 @@
 {
-  "sectionOrder": ["video", "services", "downloads", "faq", "stats", "contact"],
-  "heroBackgroundImage": "",
-  "heroBackgroundImageAlt": "",
-  "customSections": [],
   "youtubeIntro": "Erfahren Sie mehr über unsere Kanzlei in diesem kurzen Video.",
+  "sectionOrder": [
+    "video",
+    "services",
+    "downloads",
+    "faq",
+    "stats",
+    "contact"
+  ],
   "contactIntro": "Rufen Sie uns an oder buchen Sie online einen Beratungstermin.",
   "youtubeUrl": "https://www.youtube.com/watch?v=ZXYHPlY_pmc",
   "servicesIntro": "Wir beraten Sie kompetent in verschiedenen Rechtsgebieten.",
   "headerImage": "/uploads/wesley-tingey-kjgkqqcdynq-unsplash.jpg",
   "heroSubtitle": "Wir stehen Ihnen mit fundierter rechtlicher Expertise und persönlicher Betreuung zur Seite.",
+  "heroBackgroundImage": "/uploads/wesley-tingey-kjgkqqcdynq-unsplash.jpg",
   "youtubeTitle": "Lernen Sie uns kennen",
+  "heroBackgroundImageAlt": "",
   "contactTitle": "Vereinbaren Sie einen Termin",
   "servicesTitle": "Unsere Leistungen",
   "headerImageAlt": "",
   "ctaText": "Jetzt Termin buchen",
-  "heroTitle": "Ihre Rechtsanwaltskanzlei für kompetente Beratung"
+  "heroTitle": "Ihre Rechtsanwaltskanzlei für kompetente Beratung",
+  "customSections": []
 }
