@@ -1,4 +1,8 @@
 {
+  "sectionOrder": ["video", "services", "downloads", "faq", "stats", "contact"],
+  "heroBackgroundImage": "",
+  "heroBackgroundImageAlt": "",
+  "customSections": [],
   "youtubeIntro": "Erfahren Sie mehr über unsere Kanzlei in diesem kurzen Video.",
   "contactIntro": "Rufen Sie uns an oder buchen Sie online einen Beratungstermin.",
   "youtubeUrl": "https://www.youtube.com/watch?v=ZXYHPlY_pmc",
@@ -7,7 +11,6 @@
   "heroSubtitle": "Wir stehen Ihnen mit fundierter rechtlicher Expertise und persönlicher Betreuung zur Seite.",
   "youtubeTitle": "Lernen Sie uns kennen",
   "contactTitle": "Vereinbaren Sie einen Termin",
-  "introText": "",
   "servicesTitle": "Unsere Leistungen",
   "headerImageAlt": "",
   "ctaText": "Jetzt Termin buchen",

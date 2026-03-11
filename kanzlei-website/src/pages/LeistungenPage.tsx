@@ -1,8 +1,8 @@
 import { usePageMeta } from '../lib/usePageMeta';
-import { loadServices } from '../lib/content';
+import { loadOrderedServices } from '../lib/content';
 
 export default function LeistungenPage() {
-  const services = loadServices();
+  const services = loadOrderedServices();
 
   usePageMeta({
     title: 'Unsere Leistungen',

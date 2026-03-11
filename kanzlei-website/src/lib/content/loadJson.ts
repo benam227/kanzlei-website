@@ -25,6 +25,47 @@ export function loadServices(): ServiceItem[] {
   return data.items || [];
 }
 
+export function loadOrderedServices(): ServiceItem[] {
+  const data = servicesData as ServicesData;
+  const items = data.items || [];
+  const order = data.itemOrder;
+  
+  if (!order || order.length === 0) {
+    return items;
+  }
+  
+  // Create a map for quick lookup
+  const itemMap = new Map<string, ServiceItem>();
+  items.forEach((item) => {
+    // Generate slug from title (lowercase, remove special chars)
+    const slug = item.title.toLowerCase().replace(/[^a-zäöüß0-9]/g, '');
+    itemMap.set(slug, item);
+    // Also try with just the first part of href if available
+    if (item.href) {
+      const hrefSlug = item.href.replace('/leistungen#', '');
+      itemMap.set(hrefSlug, item);
+    }
+  });
+  
+  // Order items according to itemOrder
+  const ordered: ServiceItem[] = [];
+  order.forEach((slug: string) => {
+    const item = itemMap.get(slug);
+    if (item && !ordered.includes(item)) {
+      ordered.push(item);
+    }
+  });
+  
+  // Add any items not in the order list
+  items.forEach((item: ServiceItem) => {
+    if (!ordered.includes(item)) {
+      ordered.push(item);
+    }
+  });
+  
+  return ordered;
+}
+
 export interface HomepageData {
   heroTitle?: string;
   heroSubtitle?: string;
@@ -37,6 +78,17 @@ export interface HomepageData {
   youtubeTitle?: string;
   youtubeIntro?: string;
   youtubeUrl?: string;
+  sectionOrder?: string[];
+  heroBackgroundImage?: string;
+  heroBackgroundImageAlt?: string;
+  customSections?: Array<{
+    id: string;
+    title?: string;
+    content?: string;
+    backgroundImage?: string;
+    type?: 'text' | 'cta' | 'image' | 'video';
+    youtubeUrl?: string;
+  }>;
 }
 
 export function loadHomepageJson(): HomepageData {

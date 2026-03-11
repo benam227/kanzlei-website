@@ -11,20 +11,50 @@ collections:
     files:
       - name: "homepage"
         label: "Homepage"
-        file: "kanzlei-website/content/homepage.md"
+        file: "kanzlei-website/content/homepage.json"
+        format: "json"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Beschreibung", name: "description", widget: "string", required: false }
           - { label: "Hero Titel", name: "heroTitle", widget: "string", required: false }
           - { label: "Hero Untertitel", name: "heroSubtitle", widget: "string", required: false }
           - { label: "CTA Text", name: "ctaText", widget: "string", required: false }
-          - { label: "Inhalt", name: "body", widget: "markdown" }
+          - { label: "Hero Hintergrundbild", name: "heroBackgroundImage", widget: "image", required: false }
+          - { label: "Hero Hintergrundbild Alt", name: "heroBackgroundImageAlt", widget: "string", required: false }
+          - label: "Reihenfolge der Sektionen"
+            name: "sectionOrder"
+            widget: "list"
+            required: false
+            summary: "{{slug}}"
+            field_types: ["string"]
+          - label: "Eigene Sektionen"
+            name: "customSections"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string", required: false }
+              - { label: "Inhalt", name: "content", widget: "markdown", required: false }
+              - { label: "Hintergrundbild", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Typ", name: "type", widget: "select", options: ["text", "cta", "image", "video"], default: "text" }
+              - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+          - { label: "Services Titel", name: "servicesTitle", widget: "string", required: false }
+          - { label: "Services Einleitung", name: "servicesIntro", widget: "text", required: false }
+          - { label: "Kontakt Titel", name: "contactTitle", widget: "string", required: false }
+          - { label: "Kontakt Einleitung", name: "contactIntro", widget: "text", required: false }
+          - { label: "YouTube Titel", name: "youtubeTitle", widget: "string", required: false }
+          - { label: "YouTube Einleitung", name: "youtubeIntro", widget: "text", required: false }
+          - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
 
       - name: "services"
         label: "Leistungen"
         file: "kanzlei-website/content/services.json"
         format: "json"
         fields:
+          - label: "Reihenfolge der Leistungen"
+            name: "itemOrder"
+            widget: "list"
+            required: false
+            summary: "{{slug}}"
+            field_types: ["string"]
           - label: "Leistungen"
             name: "items"
             widget: "list"

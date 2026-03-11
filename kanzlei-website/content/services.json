@@ -1,4 +1,5 @@
 {
+  "itemOrder": ["asylrecht", "aufenthaltsrecht", "staatsangehoerigkeit"],
   "items": [
     {
       "title": "Asylrecht",

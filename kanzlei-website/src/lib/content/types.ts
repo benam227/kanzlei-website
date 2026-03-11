@@ -37,6 +37,7 @@ export interface ServiceItem {
 }
 
 export interface ServicesData {
+  itemOrder?: string[];
   items: ServiceItem[];
 }
 
@@ -54,6 +55,15 @@ export interface FooterData {
   links: FooterLink[];
 }
 
+export interface CustomSection {
+  id: string;
+  title?: string;
+  content?: string;
+  backgroundImage?: string;
+  type?: 'text' | 'cta' | 'image' | 'video';
+  youtubeUrl?: string;
+}
+
 export interface HomepageData {
   heroTitle?: string;
   heroSubtitle?: string;
@@ -66,6 +76,10 @@ export interface HomepageData {
   youtubeTitle?: string;
   youtubeIntro?: string;
   youtubeUrl?: string;
+  sectionOrder?: string[];
+  heroBackgroundImage?: string;
+  heroBackgroundImageAlt?: string;
+  customSections?: CustomSection[];
 }
 
 export interface SiteSettingsPage {
