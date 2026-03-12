@@ -134,9 +134,9 @@ export default function HomePage() {
     return (
       <section id="downloads" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Downloads</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">{homepageJson?.downloadsTitle || (lang === 'en' ? 'Downloads' : 'Downloads')}</h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Hier finden Sie hilfreiche Dokumente zum Download.
+            {homepageJson?.downloadsIntro || (lang === 'en' ? 'Here you will find helpful documents to download.' : 'Hier finden Sie hilfreiche Dokumente zum Download.')}
           </p>
           <div className="space-y-4">
             {downloads.map((item, index) => (
@@ -161,9 +161,9 @@ export default function HomePage() {
     return (
       <section id="faq" className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Häufig gestellte Fragen</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">{homepageJson?.faqTitle || (lang === 'en' ? 'Frequently Asked Questions' : 'Häufig gestellte Fragen')}</h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Antworten auf häufige Fragen zu unseren Leistungen.
+            {homepageJson?.faqIntro || (lang === 'en' ? 'Answers to common questions about our services.' : 'Antworten auf häufige Fragen zu unseren Leistungen.')}
           </p>
           <div className="space-y-6">
             {faqs.slice(0, 4).map((faq, index) => (
@@ -184,19 +184,19 @@ export default function HomePage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <div className="text-4xl font-bold mb-2">15+</div>
-            <div className="text-gray-300">Jahre Erfahrung</div>
+            <div className="text-gray-300">{lang === 'en' ? 'Years Experience' : 'Jahre Erfahrung'}</div>
           </div>
           <div>
             <div className="text-4xl font-bold mb-2">500+</div>
-            <div className="text-gray-300">Erfolgreiche Fälle</div>
+            <div className="text-gray-300">{lang === 'en' ? 'Successful Cases' : 'Erfolgreiche Fälle'}</div>
           </div>
           <div>
             <div className="text-4xl font-bold mb-2">98%</div>
-            <div className="text-gray-300">Zufriedene Kunden</div>
+            <div className="text-gray-300">{lang === 'en' ? 'Satisfied Clients' : 'Zufriedene Kunden'}</div>
           </div>
           <div>
             <div className="text-4xl font-bold mb-2">24h</div>
-            <div className="text-gray-300">Reaktionszeit</div>
+            <div className="text-gray-300">{lang === 'en' ? 'Response Time' : 'Reaktionszeit'}</div>
           </div>
         </div>
       </div>

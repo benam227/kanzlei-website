@@ -10,7 +10,7 @@ export default function FAQPage() {
 
   usePageMeta({
     title: 'FAQ',
-    description: 'Häufig gestellte Fragen zu unseren Leistungen.',
+    description: lang === 'en' ? 'Frequently asked questions about our services.' : 'Häufig gestellte Fragen zu unseren Leistungen.',
   });
 
   const handleToggle = (index: number) => {
@@ -46,7 +46,7 @@ export default function FAQPage() {
             ))}
           </div>
         ) : (
-          <p className="text-xl">Keine FAQ-Einträge vorhanden.</p>
+          <p className="text-xl">{lang === 'en' ? 'No FAQ entries available.' : 'Keine FAQ-Einträge vorhanden.'}</p>
         )}
       </div>
     </div>

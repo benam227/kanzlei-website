@@ -76,6 +76,10 @@ export interface HomepageData {
   youtubeTitle?: string;
   youtubeIntro?: string;
   youtubeUrl?: string;
+  downloadsTitle?: string;
+  downloadsIntro?: string;
+  faqTitle?: string;
+  faqIntro?: string;
   sectionOrder?: string[];
   heroBackgroundImage?: string;
   heroBackgroundImageAlt?: string;
