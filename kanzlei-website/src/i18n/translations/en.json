@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "booking": "Book Appointment",
+    "faq": "FAQ",
+    "downloads": "Downloads",
+    "contact": "Contact",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  },
+  "buttons": {
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "download": "Download",
+    "submit": "Submit",
+    "send": "Send",
+    "cancel": "Cancel",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "readMore": "Read More",
+    "accept": "Accept",
+    "decline": "Decline",
+    "manage": "Manage"
+  },
+  "consent": {
+    "title": "Cookie Settings",
+    "description": "We use cookies to improve your experience. You can choose which categories to allow.",
+    "essential": "Essential",
+    "essentialDescription": "Required for basic website functionality.",
+    "analytics": "Analytics",
+    "analyticsDescription": "Help us understand how visitors use our website.",
+    "externalMedia": "External Media",
+    "externalMediaDescription": "Allow loading of content such as YouTube videos.",
+    "save": "Save Settings",
+    "acceptAll": "Accept All",
+    "declineAll": "Decline All"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "subject": "Subject",
+    "sendMessage": "Send Message",
+    "success": "Thank you! Your message has been sent successfully.",
+    "error": "An error occurred. Please try again.",
+    "required": "Required"
+  },
+  "footer": {
+    "allRightsReserved": "All rights reserved",
+    "legal": "Legal"
+  },
+  "language": {
+    "select": "Select language",
+    "current": "Current"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "goHome": "Go to homepage"
+  }
+}

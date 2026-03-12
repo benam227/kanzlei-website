@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "about": "Über mich",
+    "booking": "Termin buchen",
+    "faq": "FAQ",
+    "downloads": "Downloads",
+    "contact": "Kontakt",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "buttons": {
+    "learnMore": "Mehr erfahren",
+    "bookNow": "Jetzt buchen",
+    "download": "Herunterladen",
+    "submit": "Absenden",
+    "send": "Senden",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "readMore": "Mehr lesen",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "manage": "Verwalten"
+  },
+  "consent": {
+    "title": "Cookie-Einstellungen",
+    "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Sie können wählen, welche Kategorien Sie zulassen möchten.",
+    "essential": "Essenziell",
+    "essentialDescription": "Notwendig für die grundlegende Funktionalität der Website.",
+    "analytics": "Analyse",
+    "analyticsDescription": "Helfen uns zu verstehen, wie Besucher unsere Website nutzen.",
+    "externalMedia": "Externe Medien",
+    "externalMediaDescription": "Ermöglichen das Laden von Inhalten wie YouTube-Videos.",
+    "save": "Einstellungen speichern",
+    "acceptAll": "Alle akzeptieren",
+    "declineAll": "Alle ablehnen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "subject": "Betreff",
+    "sendMessage": "Nachricht senden",
+    "success": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+    "error": "Leider ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "required": "Pflichtfeld"
+  },
+  "footer": {
+    "allRightsReserved": "Alle Rechte vorbehalten",
+    "legal": "Rechtliches"
+  },
+  "language": {
+    "select": "Sprache auswählen",
+    "current": "Aktuell"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "notFound": "Seite nicht gefunden",
+    "goHome": "Zur Startseite"
+  }
+}
