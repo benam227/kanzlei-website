@@ -3,7 +3,7 @@ import { usePageMeta } from '../lib/usePageMeta';
 import { toYouTubeEmbedUrl } from '../lib/content';
 import GatedEmbed from '../components/GatedEmbed';
 import PageHeader from '../components/PageHeader';
-import aboutData from '../../content/about.json';
+import aboutData from '../../content/about.de.json';
 
 interface AboutData {
   title?: string;

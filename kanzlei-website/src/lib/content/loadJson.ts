@@ -1,10 +1,10 @@
 import type { FAQItem, DownloadItem, FAQData, DownloadsData, FooterData, ServiceItem, ServicesData } from './types';
-import faqData from '../../../content/faq.json';
-import downloadsData from '../../../content/downloads.json';
-import footerData from '../../../content/footer.json';
-import servicesData from '../../../content/services.json';
-import homepageData from '../../../content/homepage.json';
-import siteSettingsData from '../../../content/siteSettings.json';
+import faqData from '../../../content/faq.de.json';
+import downloadsData from '../../../content/downloads.de.json';
+import footerData from '../../../content/footer.de.json';
+import servicesData from '../../../content/services.de.json';
+import homepageData from '../../../content/homepage.de.json';
+import siteSettingsData from '../../../content/siteSettings.de.json';
 
 export function loadFAQ(): FAQItem[] {
   const data = faqData as FAQData;

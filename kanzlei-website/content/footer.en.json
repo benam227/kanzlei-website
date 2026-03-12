@@ -1,0 +1,20 @@
+{
+  "companyName": "LAURILAW",
+  "addressLines": [
+    "Teststrasse 7",
+    "München"
+  ],
+  "email": "info@laurilaw.com",
+  "phone": "+4989777666",
+  "footerNote": "Fussnoten Infotext",
+  "links": [
+    {
+      "label": "Impressum",
+      "href": "/impressum"
+    },
+    {
+      "label": "Datenschutz",
+      "href": "/datenschutz"
+    }
+  ]
+}

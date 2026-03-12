@@ -1,0 +1,15 @@
+{
+  "title": "Über mich",
+  "intro": "Herzlich willkommen auf meiner Seite. Ich bin seit über 15 Jahren als Rechtsanwalt tätig und stehe Ihnen mit fundiertem Fachwissen zur Seite.",
+  "bio": "Ich habe mein Studium der Rechtswissenschaften an der Universität abgeschlossen und mich nach Jahren der Tätigkeit in großen Kanzleien 2015 selbstständig gemacht. Meine Schwerpunkte liegen im Familienrecht, Arbeitsrecht und allgemeinen Zivilrecht.",
+  "vita": [
+    "2015: Gründung der eigenen Kanzlei",
+    "2010-2015: Angestellter Anwalt in Großkanzlei",
+    "2008: Zulassung als Rechtsanwalt",
+    "2005: Abschluss Rechtswissenschaften"
+  ],
+  "youtubeTitle": "",
+  "youtubeUrl": "",
+  "headerImage": "",
+  "headerImageAlt": ""
+}

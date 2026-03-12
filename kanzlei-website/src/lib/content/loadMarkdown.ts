@@ -1,9 +1,9 @@
 import * as yaml from 'js-yaml';
 import type { MarkdownContent } from './types';
 
-import homepageRaw from '../../../content/homepage.md?raw';
-import impressumRaw from '../../../content/impressum.md?raw';
-import datenschutzRaw from '../../../content/datenschutz.md?raw';
+import homepageRaw from '../../../content/homepage.de.md?raw';
+import impressumRaw from '../../../content/impressum.de.md?raw';
+import datenschutzRaw from '../../../content/datenschutz.de.md?raw';
 
 function parseFrontmatter(raw: string): { data: Record<string, unknown>; content: string } {
   if (!raw.startsWith('---\n')) {
