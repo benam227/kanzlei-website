@@ -1,13 +1,18 @@
 import { usePageMeta } from '../lib/usePageMeta';
+import { useLanguage } from '../lib/useLanguage';
 import { loadOrderedServices } from '../lib/content';
+import { Link } from 'react-router-dom';
 
 export default function LeistungenPage() {
-  const services = loadOrderedServices();
+  const lang = useLanguage();
+  const services = loadOrderedServices(lang);
 
   usePageMeta({
     title: 'Unsere Leistungen',
     description: 'Juristische Beratung im Migrationsrecht - Asylrecht, Aufenthaltsrecht, Staatsangehörigkeitsrecht.',
   });
+
+  const bookingPath = lang === 'en' ? '/en/termin-buchen' : '/termin-buchen';
 
   return (
     <div className="bg-[#1a365d] text-white py-12">
@@ -29,12 +34,12 @@ export default function LeistungenPage() {
           <p className="text-gray-200 mb-6">
             Vereinbaren Sie einen unverbindlichen Beratungstermin.
           </p>
-          <a
-            href="/termin-buchen"
+          <Link
+            to={bookingPath}
             className="inline-block px-8 py-4 bg-[#c53030] text-white rounded-lg text-lg font-semibold hover:bg-[#e53e3e] transition-colors"
           >
             Termin buchen
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,10 +1,12 @@
 import ReactMarkdown from 'react-markdown';
 import { usePageMeta } from '../lib/usePageMeta';
+import { useLanguage } from '../lib/useLanguage';
 import { loadImpressum } from '../lib/content';
 import PageContainer from '../components/PageContainer';
 
 export default function ImpressumPage() {
-  const content = loadImpressum();
+  const lang = useLanguage();
+  const content = loadImpressum(lang);
 
   usePageMeta({
     title: content?.title || 'Impressum',

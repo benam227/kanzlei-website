@@ -9,9 +9,9 @@ collections:
   - name: "pages"
     label: "Seiten"
     files:
-      - name: "homepage"
-        label: "Homepage"
-        file: "kanzlei-website/content/homepage.json"
+      - name: "homepage-de"
+        label: "Homepage (DE)"
+        file: "kanzlei-website/content/homepage.de.json"
         format: "json"
         fields:
           - { label: "Hero Titel", name: "heroTitle", widget: "string", required: false }
@@ -44,9 +44,44 @@ collections:
           - { label: "YouTube Einleitung", name: "youtubeIntro", widget: "text", required: false }
           - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
 
-      - name: "services"
-        label: "Leistungen"
-        file: "kanzlei-website/content/services.json"
+      - name: "homepage-en"
+        label: "Homepage (EN)"
+        file: "kanzlei-website/content/homepage.en.json"
+        format: "json"
+        fields:
+          - { label: "Hero Titel", name: "heroTitle", widget: "string", required: false }
+          - { label: "Hero Untertitel", name: "heroSubtitle", widget: "string", required: false }
+          - { label: "CTA Text", name: "ctaText", widget: "string", required: false }
+          - { label: "Hero Hintergrundbild", name: "heroBackgroundImage", widget: "image", required: false }
+          - { label: "Hero Hintergrundbild Alt", name: "heroBackgroundImageAlt", widget: "string", required: false }
+          - label: "Reihenfolge der Sektionen"
+            name: "sectionOrder"
+            widget: "list"
+            required: false
+            summary: "{{slug}}"
+            field_types: ["string"]
+          - label: "Eigene Sektionen"
+            name: "customSections"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string", required: false }
+              - { label: "Inhalt", name: "content", widget: "markdown", required: false }
+              - { label: "Hintergrundbild", name: "backgroundImage", widget: "image", required: false }
+              - { label: "Typ", name: "type", widget: "select", options: ["text", "cta", "image", "video"], default: "text" }
+              - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+          - { label: "Services Titel", name: "servicesTitle", widget: "string", required: false }
+          - { label: "Services Einleitung", name: "servicesIntro", widget: "text", required: false }
+          - { label: "Kontakt Titel", name: "contactTitle", widget: "string", required: false }
+          - { label: "Kontakt Einleitung", name: "contactIntro", widget: "text", required: false }
+          - { label: "YouTube Titel", name: "youtubeTitle", widget: "string", required: false }
+          - { label: "YouTube Einleitung", name: "youtubeIntro", widget: "text", required: false }
+          - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+
+      - name: "services-de"
+        label: "Leistungen (DE)"
+        file: "kanzlei-website/content/services.de.json"
         format: "json"
         fields:
           - label: "Reihenfolge der Leistungen"
@@ -64,9 +99,29 @@ collections:
               - { label: "Beschreibung", name: "text", widget: "text" }
               - { label: "Link", name: "href", widget: "string", required: false }
 
-      - name: "about"
-        label: "Über mich"
-        file: "kanzlei-website/content/about.json"
+      - name: "services-en"
+        label: "Leistungen (EN)"
+        file: "kanzlei-website/content/services.en.json"
+        format: "json"
+        fields:
+          - label: "Reihenfolge der Leistungen"
+            name: "itemOrder"
+            widget: "list"
+            required: false
+            summary: "{{slug}}"
+            field_types: ["string"]
+          - label: "Leistungen"
+            name: "items"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "text", widget: "text" }
+              - { label: "Link", name: "href", widget: "string", required: false }
+
+      - name: "about-de"
+        label: "Über mich (DE)"
+        file: "kanzlei-website/content/about.de.json"
         format: "json"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
@@ -83,9 +138,28 @@ collections:
           - { label: "Header Bild", name: "headerImage", widget: "image", required: false }
           - { label: "Header Bild Alt Text", name: "headerImageAlt", widget: "string", required: false }
 
-      - name: "faq"
-        label: "FAQ"
-        file: "kanzlei-website/content/faq.json"
+      - name: "about-en"
+        label: "Über mich (EN)"
+        file: "kanzlei-website/content/about.en.json"
+        format: "json"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Einleitung", name: "intro", widget: "text", required: false }
+          - { label: "Biografie", name: "bio", widget: "text", required: false }
+          - label: "Vita / Meilensteine"
+            name: "vita"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+          - { label: "YouTube Titel", name: "youtubeTitle", widget: "string", required: false }
+          - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+          - { label: "Header Bild", name: "headerImage", widget: "image", required: false }
+          - { label: "Header Bild Alt Text", name: "headerImageAlt", widget: "string", required: false }
+
+      - name: "faq-de"
+        label: "FAQ (DE)"
+        file: "kanzlei-website/content/faq.de.json"
         format: "json"
         fields:
           - label: "Einträge"
@@ -96,9 +170,22 @@ collections:
               - { label: "Frage", name: "question", widget: "string" }
               - { label: "Antwort", name: "answer", widget: "text" }
 
-      - name: "downloads"
-        label: "Downloads"
-        file: "kanzlei-website/content/downloads.json"
+      - name: "faq-en"
+        label: "FAQ (EN)"
+        file: "kanzlei-website/content/faq.en.json"
+        format: "json"
+        fields:
+          - label: "Einträge"
+            name: "items"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Frage", name: "question", widget: "string" }
+              - { label: "Antwort", name: "answer", widget: "text" }
+
+      - name: "downloads-de"
+        label: "Downloads (DE)"
+        file: "kanzlei-website/content/downloads.de.json"
         format: "json"
         fields:
           - label: "Einträge"
@@ -110,17 +197,47 @@ collections:
               - { label: "Beschreibung", name: "description", widget: "string", required: false }
               - { label: "Dateipfad", name: "href", widget: "string" }
 
-      - name: "impressum"
-        label: "Impressum"
-        file: "kanzlei-website/content/impressum.md"
+      - name: "downloads-en"
+        label: "Downloads (EN)"
+        file: "kanzlei-website/content/downloads.en.json"
+        format: "json"
+        fields:
+          - label: "Einträge"
+            name: "items"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "string", required: false }
+              - { label: "Dateipfad", name: "href", widget: "string" }
+
+      - name: "impressum-de"
+        label: "Impressum (DE)"
+        file: "kanzlei-website/content/impressum.de.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Beschreibung", name: "description", widget: "string", required: false }
           - { label: "Inhalt", name: "body", widget: "markdown" }
 
-      - name: "datenschutz"
-        label: "Datenschutz"
-        file: "kanzlei-website/content/datenschutz.md"
+      - name: "impressum-en"
+        label: "Impressum (EN)"
+        file: "kanzlei-website/content/impressum.en.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschreibung", name: "description", widget: "string", required: false }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "datenschutz-de"
+        label: "Datenschutz (DE)"
+        file: "kanzlei-website/content/datenschutz.de.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschreibung", name: "description", widget: "string", required: false }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "datenschutz-en"
+        label: "Datenschutz (EN)"
+        file: "kanzlei-website/content/datenschutz.en.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Beschreibung", name: "description", widget: "string", required: false }
@@ -129,9 +246,9 @@ collections:
   - name: "settings"
     label: "Daten"
     files:
-      - name: "siteSettings"
-        label: "Seiten Einstellungen"
-        file: "kanzlei-website/content/siteSettings.json"
+      - name: "siteSettings-de"
+        label: "Seiten Einstellungen (DE)"
+        file: "kanzlei-website/content/siteSettings.de.json"
         format: "json"
         fields:
           - label: "Startseite"
@@ -183,9 +300,80 @@ collections:
               - { label: "Nav Label", name: "navLabel", widget: "string", default: "Downloads" }
               - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 6 }
 
-      - name: "footer"
-        label: "Footer"
-        file: "kanzlei-website/content/footer.json"
+      - name: "siteSettings-en"
+        label: "Seiten Einstellungen (EN)"
+        file: "kanzlei-website/content/siteSettings.en.json"
+        format: "json"
+        fields:
+          - label: "Startseite"
+            name: "home"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Home" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 1 }
+          - label: "Leistungen"
+            name: "services"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Services" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 2 }
+          - label: "Über mich"
+            name: "about"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "About me" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 3 }
+          - label: "Termin buchen"
+            name: "booking"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Book appointment" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 4 }
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "FAQ" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 5 }
+          - label: "Downloads"
+            name: "downloads"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Aktiviert", name: "enabled", widget: "boolean", default: true }
+              - { label: "Nav Label", name: "navLabel", widget: "string", default: "Downloads" }
+              - { label: "Nav Reihenfolge", name: "navOrder", widget: "number", default: 6 }
+
+      - name: "footer-de"
+        label: "Footer (DE)"
+        file: "kanzlei-website/content/footer.de.json"
+        format: "json"
+        fields:
+          - { label: "Firmenname", name: "companyName", widget: "string" }
+          - { label: "Adresszeilen", name: "addressLines", widget: "list" }
+          - { label: "E-Mail", name: "email", widget: "string", required: false }
+          - { label: "Telefon", name: "phone", widget: "string", required: false }
+          - { label: "Fußnotentext", name: "footerNote", widget: "string", required: false }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+
+      - name: "footer-en"
+        label: "Footer (EN)"
+        file: "kanzlei-website/content/footer.en.json"
         format: "json"
         fields:
           - { label: "Firmenname", name: "companyName", widget: "string" }

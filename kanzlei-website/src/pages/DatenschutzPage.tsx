@@ -1,10 +1,12 @@
 import ReactMarkdown from 'react-markdown';
 import { usePageMeta } from '../lib/usePageMeta';
+import { useLanguage } from '../lib/useLanguage';
 import { loadDatenschutz } from '../lib/content';
 import PageContainer from '../components/PageContainer';
 
 export default function DatenschutzPage() {
-  const content = loadDatenschutz();
+  const lang = useLanguage();
+  const content = loadDatenschutz(lang);
 
   usePageMeta({
     title: content?.title || 'Datenschutz',

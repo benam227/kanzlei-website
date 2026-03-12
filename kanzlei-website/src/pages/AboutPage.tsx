@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { usePageMeta } from '../lib/usePageMeta';
-import { toYouTubeEmbedUrl } from '../lib/content';
+import { useLanguage } from '../lib/useLanguage';
+import { loadAbout, toYouTubeEmbedUrl } from '../lib/content';
 import GatedEmbed from '../components/GatedEmbed';
 import PageHeader from '../components/PageHeader';
-import aboutData from '../../content/about.de.json';
 
 interface AboutData {
   title?: string;
@@ -17,12 +17,15 @@ interface AboutData {
 }
 
 export default function AboutPage() {
-  const about = aboutData as AboutData;
+  const lang = useLanguage();
+  const about = loadAbout(lang) as AboutData;
 
   usePageMeta({
     title: about?.title || 'Über mich',
     description: about?.intro || 'Erfahren Sie mehr über unsere Kanzlei.',
   });
+
+  const bookingPath = lang === 'en' ? '/en/termin-buchen' : '/termin-buchen';
 
   // Use PageHeader if headerImage is set, otherwise inline header
   if (about?.headerImage) {
@@ -81,7 +84,7 @@ export default function AboutPage() {
               Möchten Sie einen Termin vereinbaren oder haben Sie Fragen?
             </p>
             <Link
-              to="/termin-buchen"
+              to={bookingPath}
               className="inline-block px-6 py-3 bg-[#c53030] text-white rounded-lg font-semibold hover:bg-[#e53e3e] transition-colors"
             >
               Termin buchen
@@ -151,7 +154,7 @@ export default function AboutPage() {
           Möchten Sie einen Termin vereinbaren oder haben Sie Fragen?
         </p>
         <Link
-          to="/termin-buchen"
+          to={bookingPath}
           className="inline-block px-6 py-3 bg-[#c53030] text-white rounded-lg font-semibold hover:bg-[#e53e3e] transition-colors"
         >
           Termin buchen

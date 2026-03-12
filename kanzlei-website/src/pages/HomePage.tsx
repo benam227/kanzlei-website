@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { usePageMeta } from '../lib/usePageMeta';
+import { useLanguage } from '../lib/useLanguage';
 import { loadHomepage, loadOrderedServices, loadHomepageJson, loadDownloads, loadFAQ, toYouTubeEmbedUrl, type CustomSection } from '../lib/content';
 import GatedEmbed from '../components/GatedEmbed';
 
@@ -11,11 +12,12 @@ interface ServiceItem {
 }
 
 export default function HomePage() {
-  const homepage = loadHomepage();
-  const homepageJson = loadHomepageJson();
-  const services = loadOrderedServices();
-  const downloads = loadDownloads();
-  const faqs = loadFAQ();
+  const lang = useLanguage();
+  const homepage = loadHomepage(lang);
+  const homepageJson = loadHomepageJson(lang);
+  const services = loadOrderedServices(lang);
+  const downloads = loadDownloads(lang);
+  const faqs = loadFAQ(lang);
 
   usePageMeta({
     title: homepage?.title || 'Willkommen',
@@ -46,7 +48,7 @@ export default function HomePage() {
           {homepageJson?.heroSubtitle || homepage?.heroSubtitle || 'Wir stehen Ihnen mit fundierter rechtlicher Expertise und persönlicher Betreuung zur Seite.'}
         </p>
         <Link
-          to="/termin-buchen"
+          to={`/${lang === 'en' ? 'en/' : ''}termin-buchen`}
           className="inline-block px-8 py-4 bg-[#c53030] text-white rounded-lg text-lg font-semibold hover:bg-[#e53e3e] transition-colors"
         >
           {homepageJson?.ctaText || homepage?.ctaText || 'Termin buchen'}
@@ -93,7 +95,7 @@ export default function HomePage() {
           {homepageJson?.contactIntro || 'Rufen Sie uns an oder buchen Sie online einen Beratungstermin.'}
         </p>
         <Link
-          to="/termin-buchen"
+          to={`/${lang === 'en' ? 'en/' : ''}termin-buchen`}
           className="inline-block px-8 py-4 bg-[#c53030] text-white rounded-lg text-lg font-semibold hover:bg-[#e53e3e] transition-colors"
         >
           {homepageJson?.ctaText || homepage?.ctaText || 'Termin buchen'}
@@ -251,7 +253,7 @@ export default function HomePage() {
             {title && <h2 className="text-3xl font-bold mb-6">{title}</h2>}
             {content && <p className="text-gray-200 mb-8">{content}</p>}
             <Link
-              to="/termin-buchen"
+              to={`/${lang === 'en' ? 'en/' : ''}termin-buchen`}
               className="inline-block px-8 py-4 bg-[#c53030] text-white rounded-lg text-lg font-semibold hover:bg-[#e53e3e] transition-colors"
             >
               Termin buchen

@@ -89,14 +89,12 @@ export interface SiteSettingsPage {
 }
 
 export interface SiteSettings {
-  pages: {
-    home?: SiteSettingsPage;
-    services?: SiteSettingsPage;
-    about?: SiteSettingsPage;
-    booking?: SiteSettingsPage;
-    faq?: SiteSettingsPage;
-    downloads?: SiteSettingsPage;
-  };
+  home?: SiteSettingsPage;
+  services?: SiteSettingsPage;
+  about?: SiteSettingsPage;
+  booking?: SiteSettingsPage;
+  faq?: SiteSettingsPage;
+  downloads?: SiteSettingsPage;
 }
 
 export interface NavItem {
@@ -104,4 +102,15 @@ export interface NavItem {
   label: string;
   enabled: boolean;
   order: number;
+}
+
+export interface AboutData {
+  title?: string;
+  intro?: string;
+  bio?: string;
+  vita?: Array<{ text: string }>;
+  youtubeTitle?: string;
+  youtubeUrl?: string;
+  headerImage?: string;
+  headerImageAlt?: string;
 }

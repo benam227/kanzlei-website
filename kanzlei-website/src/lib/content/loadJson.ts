@@ -1,32 +1,48 @@
-import type { FAQItem, DownloadItem, FAQData, DownloadsData, FooterData, ServiceItem, ServicesData } from './types';
-import faqData from '../../../content/faq.de.json';
-import downloadsData from '../../../content/downloads.de.json';
-import footerData from '../../../content/footer.de.json';
-import servicesData from '../../../content/services.de.json';
-import homepageData from '../../../content/homepage.de.json';
-import siteSettingsData from '../../../content/siteSettings.de.json';
+import type { FAQItem, DownloadItem, FAQData, DownloadsData, FooterData, ServiceItem, ServicesData, HomepageData, SiteSettings, NavItem, AboutData } from './types';
 
-export function loadFAQ(): FAQItem[] {
-  const data = faqData as FAQData;
+// Dynamic JSON imports with language support
+type JsonModules = Record<string, { default: unknown }>;
+
+const jsonModules = import.meta.glob('/content/*.json', { eager: true }) as JsonModules;
+
+function loadJsonFile<T>(filename: string, lang: string): T {
+  // Try requested language first
+  const langPath = `/content/${filename}.${lang}.json`;
+  if (jsonModules[langPath]) {
+    return jsonModules[langPath].default as T;
+  }
+  
+  // Fallback to German
+  const dePath = `/content/${filename}.de.json`;
+  if (jsonModules[dePath]) {
+    return jsonModules[dePath].default as T;
+  }
+  
+  // Return empty object as fallback
+  return {} as T;
+}
+
+export function loadFAQ(lang: string = 'de'): FAQItem[] {
+  const data = loadJsonFile<FAQData>('faq', lang);
   return data.items || [];
 }
 
-export function loadDownloads(): DownloadItem[] {
-  const data = downloadsData as DownloadsData;
+export function loadDownloads(lang: string = 'de'): DownloadItem[] {
+  const data = loadJsonFile<DownloadsData>('downloads', lang);
   return data.items || [];
 }
 
-export function loadFooter(): FooterData {
-  return footerData as FooterData;
+export function loadFooter(lang: string = 'de'): FooterData {
+  return loadJsonFile<FooterData>('footer', lang);
 }
 
-export function loadServices(): ServiceItem[] {
-  const data = servicesData as ServicesData;
+export function loadServices(lang: string = 'de'): ServiceItem[] {
+  const data = loadJsonFile<ServicesData>('services', lang);
   return data.items || [];
 }
 
-export function loadOrderedServices(): ServiceItem[] {
-  const data = servicesData as ServicesData;
+export function loadOrderedServices(lang: string = 'de'): ServiceItem[] {
+  const data = loadJsonFile<ServicesData>('services', lang);
   const items = data.items || [];
   const order = data.itemOrder;
   
@@ -66,33 +82,8 @@ export function loadOrderedServices(): ServiceItem[] {
   return ordered;
 }
 
-export interface HomepageData {
-  heroTitle?: string;
-  heroSubtitle?: string;
-  ctaText?: string;
-  introText?: string;
-  servicesTitle?: string;
-  servicesIntro?: string;
-  contactTitle?: string;
-  contactIntro?: string;
-  youtubeTitle?: string;
-  youtubeIntro?: string;
-  youtubeUrl?: string;
-  sectionOrder?: string[];
-  heroBackgroundImage?: string;
-  heroBackgroundImageAlt?: string;
-  customSections?: Array<{
-    id: string;
-    title?: string;
-    content?: string;
-    backgroundImage?: string;
-    type?: 'text' | 'cta' | 'image' | 'video';
-    youtubeUrl?: string;
-  }>;
-}
-
-export function loadHomepageJson(): HomepageData {
-  return homepageData as HomepageData;
+export function loadHomepageJson(lang: string = 'de'): HomepageData {
+  return loadJsonFile<HomepageData>('homepage', lang);
 }
 
 /**
@@ -134,34 +125,12 @@ export function toYouTubeEmbedUrl(url: string | undefined): string | null {
   return `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`;
 }
 
-export interface SiteSettingsPage {
-  enabled: boolean;
-  navLabel: string;
-  navOrder: number;
+export function loadSiteSettings(lang: string = 'de'): SiteSettings {
+  return loadJsonFile<SiteSettings>('siteSettings', lang);
 }
 
-export interface SiteSettings {
-  home?: SiteSettingsPage;
-  services?: SiteSettingsPage;
-  about?: SiteSettingsPage;
-  booking?: SiteSettingsPage;
-  faq?: SiteSettingsPage;
-  downloads?: SiteSettingsPage;
-}
-
-export function loadSiteSettings(): SiteSettings {
-  return siteSettingsData as SiteSettings;
-}
-
-export interface NavItem {
-  to: string;
-  label: string;
-  enabled: boolean;
-  order: number;
-}
-
-export function loadNavItems(): NavItem[] {
-  const settings = loadSiteSettings();
+export function loadNavItems(lang: string = 'de'): NavItem[] {
+  const settings = loadSiteSettings(lang);
   const items: NavItem[] = [];
   
   if (settings.home?.enabled) {
@@ -184,4 +153,8 @@ export function loadNavItems(): NavItem[] {
   }
   
   return items.sort((a, b) => a.order - b.order);
+}
+
+export function loadAbout(lang: string = 'de'): AboutData {
+  return loadJsonFile<AboutData>('about', lang);
 }

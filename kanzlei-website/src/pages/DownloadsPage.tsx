@@ -1,9 +1,11 @@
 import { usePageMeta } from '../lib/usePageMeta';
+import { useLanguage } from '../lib/useLanguage';
 import { loadDownloads } from '../lib/content';
 import PageContainer from '../components/PageContainer';
 
 export default function DownloadsPage() {
-  const downloads = loadDownloads();
+  const lang = useLanguage();
+  const downloads = loadDownloads(lang);
 
   usePageMeta({
     title: 'Downloads',

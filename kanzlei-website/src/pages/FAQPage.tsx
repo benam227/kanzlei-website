@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { usePageMeta } from '../lib/usePageMeta';
+import { useLanguage } from '../lib/useLanguage';
 import { loadFAQ } from '../lib/content';
 
 export default function FAQPage() {
-  const faqs = loadFAQ();
+  const lang = useLanguage();
+  const faqs = loadFAQ(lang);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   usePageMeta({
