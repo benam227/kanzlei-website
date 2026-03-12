@@ -15,9 +15,17 @@ const routes = [
   { path: '/datenschutz', priority: '0.5', freq: 'yearly' },
 ];
 
+const enRoutes = routes.map(r => ({
+  path: '/en' + r.path,
+  priority: r.priority,
+  freq: r.freq
+}));
+
+const allRoutes = [...routes, ...enRoutes];
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes.map(r => `  <url>
+${allRoutes.map(r => `  <url>
     <loc>${SITE_URL}${r.path}</loc>
     <changefreq>${r.freq}</changefreq>
     <priority>${r.priority}</priority>
