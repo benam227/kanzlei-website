@@ -1,41 +1,41 @@
 ---
-title: Impressum
-description: Impressum unserer Rechtsanwaltskanzlei.
+title: Legal Notice
+description: Legal notice of our law firm.
 ---
 
-## Angaben gemäß § 5 TMG
+## Information according to § 5 TMG
 
-Kanzlei Recht  
-Musterstraße 123  
-12345 Musterstadt
+Law Firm Laurilaw  
+Teststrasse 7  
+Munich
 
-## Kontakt
+## Contact
 
-Telefon: +49 123 456789  
-E-Mail: info@kanzlei-recht.de
+Phone: +49 89 777666  
+Email: info@laurilaw.com
 
-## Vertreten durch
+## Represented by
 
-Rechtsanwalt Max Mustermann
+Attorney at Law Laurin Baumann
 
-## Berufsbezeichnung
+## Professional Title
 
-Die Berufsbezeichnung "Rechtsanwalt" wurde in Deutschland verliehen.
+The professional title "Rechtsanwalt" (Attorney at Law) was awarded in Germany.
 
-## Zuständige Kammer
+## Responsible Bar Association
 
-Rechtsanwaltskammer Musterstadt  
-Musterkammerstraße 1  
-12345 Musterstadt
+Munich Bar Association  
+Prien am Chiemsee  
+83209 Prien am Chiemsee
 
-## Berufsrechtliche Regelungen
+## Professional Rules
 
-Es gelten die folgenden berufsrechtlichen Regelungen:
+The following professional rules apply:
 
-- Bundesrechtsanwaltsordnung (BRAO)
-- Rechtsanwaltsvergütungsgesetz (RVG)
-- Berufsordnung für Rechtsanwälte (BORA)
+- Federal Code for Lawyers (BRAO)
+- Lawyer's Remuneration Act (RVG)
+- Professional Code of Conduct for Lawyers (BORA)
 
-## Haftung für Inhalte
+## Liability for Content
 
-Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+The content of our pages was created with the greatest care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content.

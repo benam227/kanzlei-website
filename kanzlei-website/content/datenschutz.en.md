@@ -1,44 +1,44 @@
 ---
-title: Datenschutz
-description: Datenschutzerklärung unserer Rechtsanwaltskanzlei.
+title: Privacy Policy
+description: Privacy policy of our law firm.
 ---
 
-## Server-Logfiles
+## Server Log Files
 
-Bei jedem Zugriff auf unsere Website werden automatisch Informationen an den Server unseres Website-Hostings gesendet. Diese Daten werden in sogenannten Logfiles gespeichert und umfassen:
+Each access to our website automatically sends information to the server of our web hosting provider. This data is stored in so-called log files and includes:
 
-- Browsertyp und Browserversion
-- Verwendetes Betriebssystem
+- Browser type and browser version
+- Operating system used
 - Referrer URL
-- Hostname des zugreifenden Rechners
-- Uhrzeit der Serveranfrage
+- Hostname of the accessing computer
+- Time of the server request
 
-Diese Daten dienen ausschließlich der technischen Bereitstellung der Website und werden nach 7 Tagen automatisch gelöscht. Eine Zusammenführung mit anderen Daten erfolgt nicht.
+This data is used exclusively for the technical provision of the website and is automatically deleted after 7 days. It is not combined with other data.
 
 ## Cookies
 
-Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden und keine personenbezogenen Daten enthalten. Sie dienen der Verbesserung der Nutzerfreundlichkeit und der Analyse der Website-Nutzung.
+Our website uses cookies. Cookies are small text files stored on your device and do not contain personal data. They serve to improve user-friendliness and analyze website usage.
 
-Sie können die Speicherung von Cookies in Ihren Browsereinstellungen verhindern oder bereits gesetzte Cookies löschen. Bitte beachten Sie, dass einige Funktionen unserer Website ohne Cookies möglicherweise nicht mehr verfügbar sind.
+You can prevent the storage of cookies in your browser settings or delete already set cookies. Please note that some functions of our website may no longer be available without cookies.
 
-## Matomo (Analyse)
+## Matomo (Analytics)
 
-Wir nutzen Matomo, eine Open-Source-Software zur Analyse der Website-Nutzung. Die Daten werden nur erhoben, wenn Sie dem Einsatz von Analyse-Cookies zugestimmt haben.
+We use Matomo, an open-source software for analyzing website usage. Data is only collected if you have consented to the use of analytics cookies.
 
-Die erhobenen Daten werden anonymisiert verarbeitet und nicht an Dritte weitergegeben. Die IP-Adresse wird vor der Speicherung anonymisiert.
+The collected data is processed anonymously and is not shared with third parties. The IP address is anonymized before storage.
 
-## Acuity (Online-Terminbuchung)
+## Acuity (Online Appointment Booking)
 
-Für die Online-Terminbuchung nutzen wir Acuity Scheduling. Wenn Sie das Buchungssystem nutzen, werden Ihre Eingaben direkt an Acuity übermittelt. Bitte beachten Sie die Datenschutzhinweise von Acuity.
+For online appointment booking, we use Acuity Scheduling. When you use the booking system, your input is transmitted directly to Acuity. Please note Acuity's privacy policy.
 
-Die Zahlungsabwicklung erfolgt direkt über Acuity. Wir haben keinen Zugriff auf Ihre Zahlungsdaten.
+Payment processing is handled directly through Acuity. We have no access to your payment data.
 
 ## YouTube
 
-Unsere Website bindet Videos von YouTube ein. Die Videos werden erst geladen, wenn Sie dem Einsatz externer Inhalte zustimmen. YouTube kann Informationen über Ihre Nutzung erheben.
+Our website embeds videos from YouTube. The videos are only loaded when you consent to the use of external content. YouTube may collect information about your usage.
 
-Weitere Informationen finden Sie in den Datenschutzrichtlinien von Google/YouTube.
+For more information, see Google's/YouTube's privacy policy.
 
-## Ihre Rechte
+## Your Rights
 
-Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Für Fragen kontaktieren Sie uns bitte unter info@kanzlei-recht.de.
+You have the right to access, rectification, erasure, and restriction of processing of your personal data. Please contact us at info@laurilaw.com with any questions.

@@ -1,18 +1,18 @@
 {
   "sectionOrder": ["video", "services", "downloads", "faq", "stats", "contact"],
-  "heroBackgroundImage": "",
+  "heroBackgroundImage": "/uploads/wesley-tingey-kjgkqqcdynq-unsplash.jpg",
   "heroBackgroundImageAlt": "",
   "customSections": [],
-  "youtubeIntro": "Erfahren Sie mehr über unsere Kanzlei in diesem kurzen Video.",
-  "contactIntro": "Rufen Sie uns an oder buchen Sie online einen Beratungstermin.",
+  "youtubeIntro": "Learn more about our law firm in this short video.",
+  "contactIntro": "Call us or book an online consultation appointment.",
   "youtubeUrl": "https://www.youtube.com/watch?v=ZXYHPlY_pmc",
-  "servicesIntro": "Wir beraten Sie kompetent in verschiedenen Rechtsgebieten.",
+  "servicesIntro": "We provide competent advice in various areas of law.",
   "headerImage": "/uploads/wesley-tingey-kjgkqqcdynq-unsplash.jpg",
-  "heroSubtitle": "Wir stehen Ihnen mit fundierter rechtlicher Expertise und persönlicher Betreuung zur Seite.",
-  "youtubeTitle": "Lernen Sie uns kennen",
-  "contactTitle": "Vereinbaren Sie einen Termin",
-  "servicesTitle": "Unsere Leistungen",
+  "heroSubtitle": "We are at your side with sound legal expertise and personal care.",
+  "youtubeTitle": "Get to know us",
+  "contactTitle": "Book an appointment",
+  "servicesTitle": "Our Services",
   "headerImageAlt": "",
-  "ctaText": "Jetzt Termin buchen",
-  "heroTitle": "Ihre Rechtsanwaltskanzlei für kompetente Beratung"
+  "ctaText": "Book appointment now",
+  "heroTitle": "Your law firm for competent legal advice"
 }

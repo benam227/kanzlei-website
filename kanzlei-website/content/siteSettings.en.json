@@ -1,22 +1,22 @@
 {
   "home": {
     "enabled": true,
-    "navLabel": "Start",
+    "navLabel": "Home",
     "navOrder": 1
   },
   "services": {
     "enabled": true,
-    "navLabel": "Leistungen",
+    "navLabel": "Services",
     "navOrder": 2
   },
   "about": {
     "enabled": true,
-    "navLabel": "Über mich",
+    "navLabel": "About",
     "navOrder": 3
   },
   "booking": {
     "enabled": true,
-    "navLabel": "Termin buchen",
+    "navLabel": "Book Appointment",
     "navOrder": 4
   },
   "faq": {

@@ -2,18 +2,18 @@
   "itemOrder": ["asylrecht", "aufenthaltsrecht", "staatsangehoerigkeit"],
   "items": [
     {
-      "title": "Asylrecht",
-      "text": "Beratung und Vertretung im gesamten Asylverfahren, einschließlich Erst- und Folgeanträgen, Abschiebeschutz, Dublin-Verfahren sowie Familiennachzug nach anerkanntem Schutzstatus.",
+      "title": "Asylum Law",
+      "text": "Advice and representation in the entire asylum procedure, including initial and follow-up applications, deportation protection, Dublin procedure, and family reunification after recognized protection status.",
       "href": "/leistungen#asylrecht"
     },
     {
-      "title": "Aufenthaltsrecht",
-      "text": "Unterstützung bei allen Fragen zum Aufenthaltsrecht: Aufenthaltstitel, Verlängerungen, Niederlassungserlaubnis, Blaue Karte EU, Arbeitsaufenthalte und Familiennachzug.",
+      "title": "Residence Law",
+      "text": "Support with all questions regarding residence law: residence permits, extensions, permanent residence permit, EU Blue Card, work permits, and family reunification.",
       "href": "/leistungen#aufenthalt"
     },
     {
-      "title": "Staatsangehörigkeitsrecht",
-      "text": "Begleitung bei Einbürgerungsverfahren, Prüfung der Einbürgerungsvoraussetzungen, Staatenlosigkeit und Optionspflicht nach § 29 StAG.",
+      "title": "Nationality Law",
+      "text": "Assistance with naturalization procedures, verification of naturalization requirements, statelessness, and the option obligation under Section 29 StAG.",
       "href": "/leistungen#staatsangehoerigkeit"
     }
   ]

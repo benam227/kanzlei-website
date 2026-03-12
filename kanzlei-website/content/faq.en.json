@@ -1,44 +1,44 @@
 {
   "items": [
     {
-      "question": "Wie vereinbare ich einen Termin?",
-      "answer": "Sie können einen Termin online über unser Buchungssystem vereinbaren oder uns telefonisch kontaktieren. Wir melden uns zeitnah bei Ihnen zurück."
+      "question": "How do I book an appointment?",
+      "answer": "You can book an appointment online through our booking system or contact us by phone. We will get back to you promptly."
     },
     {
-      "question": "Was kostet eine Erstberatung?",
-      "answer": "Die Kosten für eine Erstberatung richten sich nach dem Umfang der Beratung. Gerne informieren wir Sie vorab über die voraussichtlichen Kosten."
+      "question": "How much does an initial consultation cost?",
+      "answer": "The costs for an initial consultation depend on the scope of the advice. We will be happy to inform you in advance about the expected costs."
     },
     {
-      "question": "Kann ich auch außerhalb der Sprechzeiten einen Termin vereinbaren?",
-      "answer": "Ja, nach Vereinbarung sind auch Termine außerhalb unserer regulären Sprechzeiten möglich."
+      "question": "Can I also book an appointment outside of office hours?",
+      "answer": "Yes, by arrangement, appointments outside our regular office hours are also possible."
     },
     {
-      "question": "Welche Unterlagen soll ich zum ersten Termin mitbringen?",
-      "answer": "Bitte bringen Sie alle relevanten Unterlagen mit, die mit Ihrem Anliegen zusammenhängen. Dazu gehören z.B. Verträge, Korrespondenz und Dokumente."
+      "question": "What documents should I bring to the first appointment?",
+      "answer": "Please bring all relevant documents related to your matter. This includes contracts, correspondence, and documents."
     },
     {
-      "question": "Bieten Sie auch Video-Beratung an?",
-      "answer": "Ja, wir bieten Video-Beratung an. Bitte teilen Sie uns bei der Terminbuchung mit, wenn Sie eine Video-Beratung wünschen."
+      "question": "Do you also offer video consultations?",
+      "answer": "Yes, we offer video consultations. Please let us know when booking your appointment if you would like a video consultation."
     },
     {
-      "question": "Wie lange dauert ein typisches Erstgespräch?",
-      "answer": "Ein Erstgespräch dauert in der Regel 30 bis 60 Minuten, abhängig von der Komplexität Ihres Anliegens."
+      "question": "How long does a typical initial consultation last?",
+      "answer": "An initial consultation typically lasts 30 to 60 minutes, depending on the complexity of your matter."
     },
     {
-      "question": "Übernimmt meine Rechtsschutzversicherung die Kosten?",
-      "answer": "Dies hängt von Ihrem Versicherungsvertrag ab. Wir empfehlen, vorab Kontakt mit Ihrer Versicherung aufzunehmen und die Deckungszusage einzuholen."
+      "question": "Will my legal expenses insurance cover the costs?",
+      "answer": "This depends on your insurance policy. We recommend contacting your insurance provider in advance to obtain coverage confirmation."
     },
     {
-      "question": "Was ist der Unterschied zwischen Anwalt und Rechtsanwalt?",
-      "answer": "In Deutschland ist die Berufsbezeichnung \"Rechtsanwalt\" geschützt. Jeder zugelassene Anwalt ist automatisch Rechtsanwalt."
+      "question": "What is the difference between Anwalt and Rechtsanwalt?",
+      "answer": "In Germany, the professional title \"Rechtsanwalt\" (lawyer) is protected. Every admitted lawyer is automatically a Rechtsanwalt."
     },
     {
-      "question": "Kann ich mich auch ohne Termin in der Kanzlei vorstellen?",
-      "answer": "Wir empfehlen eine vorherige Terminvereinbarung, um längere Wartezeiten zu vermeiden. Ohne Termin können wir lediglich kurze Auskünfte geben."
+      "question": "Can I also visit the office without an appointment?",
+      "answer": "We recommend scheduling an appointment in advance to avoid long wait times. Without an appointment, we can only provide brief information."
     },
     {
-      "question": "Wie kann ich meine Unterlagen sicher übermitteln?",
-      "answer": "Sie können Ihre Unterlagen persönlich vorbeibringen, per Post senden oder unser sicheres Upload-Portal nutzen. Bitte kontaktieren Sie uns für die Übermittlung."
+      "question": "How can I safely transmit my documents?",
+      "answer": "You can bring your documents in person, send them by post, or use our secure upload portal. Please contact us for transmission details."
     }
   ]
 }

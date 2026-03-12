@@ -1,5 +1,5 @@
 ---
-title: Willkommen
-description: Ihre kompetente Rechtsanwaltskanzlei für alle juristischen Fragen.
+title: Welcome
+description: Your competent law firm for all legal matters.
 ---
-Guten Morgen Sonnenschein!
+Your competent law firm specializing in immigration and asylum law. We provide comprehensive legal advice and representation.

@@ -1,18 +1,18 @@
 {
   "items": [
     {
-      "title": "Mandantenfragebogen",
-      "description": "Bitte füllen Sie diesen Fragebogen vor Ihrem ersten Termin aus.",
+      "title": "Client Questionnaire",
+      "description": "Please complete this questionnaire before your first appointment.",
       "href": "/uploads/mandantenfragebogen.pdf"
     },
     {
-      "title": "Vollmacht",
-      "description": "Rechtsanwaltliche Vollmacht für die Vertretung im Migrationsverfahren.",
+      "title": "Power of Attorney",
+      "description": "Legal power of attorney for representation in immigration proceedings.",
       "href": "/uploads/vollmacht.pdf"
     },
     {
-      "title": "Checkliste Asylverfahren",
-      "description": "Wichtige Dokumente und Informationen für Ihr Asylverfahren.",
+      "title": "Asylum Procedure Checklist",
+      "description": "Important documents and information for your asylum procedure.",
       "href": "/uploads/checkliste-asyl.pdf"
     }
   ]
