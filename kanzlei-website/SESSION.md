@@ -1,13 +1,13 @@
 # Session Handoff: Kanzlei Website Multilingual
 
 ## Current Status
-- [ ] Not started / [x] Complete / [ ] Blocked
+- [ ] Not started / [ ] In progress / [ ] Blocked / [x] Complete
 
 ## Last Completed
-Multilingual implementation (German/English) fully implemented and tested locally.
+Multilingual implementation fully deployed to Netlify. All English content translated and hardcoded German text fixed.
 
 ## Current Work
-None - implementation complete. Ready for content translation.
+None - multilingual implementation complete and live.
 
 ## Decisions Made
 1. German at `/`, English at `/en` → SEO-friendly URL structure
@@ -17,25 +17,18 @@ None - implementation complete. Ready for content translation.
 5. Use existing markdown parser (NOT gray-matter) → Buffer crash issue
 
 ## Blockers / Questions
-- English content files are placeholders (copies of German) - need actual translation
+- None
 
 ## Next Steps
-1. Translate English content files (homepage.en.json, services.en.json, etc.)
-2. Deploy to Netlify
-3. Test production deployment
-4. Add hreflang tags for SEO (optional)
+1. Optional: Add hreflang tags for SEO
+2. Optional: Add more languages (French, etc.)
 
 ## Key Files Changed
-- `src/lib/content/loadJson.ts` - Dynamic imports with lang parameter
-- `src/lib/content/loadMarkdown.ts` - Dynamic markdown loading
-- `src/i18n/config.ts` - Language configuration
-- `src/i18n/index.ts` - i18next initialization
-- `src/components/LanguageSwitcher.tsx` - Language toggle UI
-- `src/App.tsx` - Routes for / and /en
-- `src/layouts/Layout.tsx` - Lang-aware navigation
-- `public/admin/config.yml` - CMS DE/EN entries
-- `public/_redirects` - SPA routing for /en/*
-- `scripts/generate-sitemap.mjs` - EN URLs in sitemap
+- `content/*.en.json` - All 7 English JSON files translated
+- `content/*.en.md` - All 3 English Markdown files translated
+- `src/pages/HomePage.tsx` - Fixed hardcoded German text (downloads, FAQ, stats sections)
+- `src/pages/FAQPage.tsx` - Fixed hardcoded German text (meta description, empty state)
+- `src/lib/content/types.ts` - Added downloadsTitle, downloadsIntro, faqTitle, faqIntro
 
 ## Commands to Run
 ```bash
@@ -43,10 +36,14 @@ cd kanzlei-website
 npm run build
 npm run preview
 git push
+npx netlify deploy --dir=dist --prod --site=91eeae1a-247a-470e-bb24-ce2446e473e0
 ```
+
+## Live URLs
+- German: https://lauriswebsite.netlify.app/
+- English: https://lauriswebsite.netlify.app/en
 
 ## Context Saved
 - `/home/alex/Lauris Projekt/KANZLEI_MULTILINGUAL_PART1.md` - Main plan
 - `/home/alex/Lauris Projekt/KANZLEI_MULTILINGUAL_PART2.md` - Implementation
 - `/home/alex/Lauris Projekt/KANZLEI_MULTILINGUAL_PART2B.md` - Testing
-- `/home/alex/Lauris Projekt/kanzlei-website/docs/i18n-testing-checklist.md` - Test checklist
