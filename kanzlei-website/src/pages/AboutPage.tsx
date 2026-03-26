@@ -49,7 +49,9 @@ export default function AboutPage() {
 
           {about?.vita && about.vita.length > 0 && (
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-[#1a365d] mb-4">Meileine</h2>
+<h2 className="text-2xl font-semibold text-[#1a365d] mb-4">
+              {lang === 'en' ? 'Milestones' : 'Meilensteine'}
+            </h2>
               <ul className="space-y-3">
                 {about.vita.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -119,7 +121,9 @@ export default function AboutPage() {
 
       {about?.vita && about.vita.length > 0 && (
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-[#1a365d] mb-4">Meileine</h2>
+          <h2 className="text-2xl font-semibold text-[#1a365d] mb-4">
+            {lang === 'en' ? 'Milestones' : 'Meilensteine'}
+          </h2>
           <ul className="space-y-3">
             {about.vita.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
