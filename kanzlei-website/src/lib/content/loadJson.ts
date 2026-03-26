@@ -133,23 +133,27 @@ export function loadNavItems(lang: string = 'de'): NavItem[] {
   const settings = loadSiteSettings(lang);
   const items: NavItem[] = [];
   
+  // Determine path prefix - empty for German, '/en' for English
+  const langPrefix = lang === 'en' ? '/en' : '';
+  
   if (settings.home?.enabled) {
-    items.push({ to: '/', label: settings.home.navLabel || 'Start', enabled: true, order: settings.home.navOrder || 1 });
+    // Home is special: '/en' becomes '/en' (index), '/' stays '/'
+    items.push({ to: lang === 'en' ? '/en' : '/', label: settings.home.navLabel || 'Start', enabled: true, order: settings.home.navOrder || 1 });
   }
   if (settings.services?.enabled) {
-    items.push({ to: '/leistungen', label: settings.services.navLabel || 'Leistungen', enabled: true, order: settings.services.navOrder || 2 });
+    items.push({ to: `${langPrefix}/leistungen`, label: settings.services.navLabel || 'Leistungen', enabled: true, order: settings.services.navOrder || 2 });
   }
   if (settings.about?.enabled) {
-    items.push({ to: '/ueber-mich', label: settings.about.navLabel || 'Über mich', enabled: true, order: settings.about.navOrder || 3 });
+    items.push({ to: `${langPrefix}/ueber-mich`, label: settings.about.navLabel || 'Über mich', enabled: true, order: settings.about.navOrder || 3 });
   }
   if (settings.booking?.enabled) {
-    items.push({ to: '/termin-buchen', label: settings.booking.navLabel || 'Termin buchen', enabled: true, order: settings.booking.navOrder || 4 });
+    items.push({ to: `${langPrefix}/termin-buchen`, label: settings.booking.navLabel || 'Termin buchen', enabled: true, order: settings.booking.navOrder || 4 });
   }
   if (settings.faq?.enabled) {
-    items.push({ to: '/faq', label: settings.faq.navLabel || 'FAQ', enabled: true, order: settings.faq.navOrder || 5 });
+    items.push({ to: `${langPrefix}/faq`, label: settings.faq.navLabel || 'FAQ', enabled: true, order: settings.faq.navOrder || 5 });
   }
   if (settings.downloads?.enabled) {
-    items.push({ to: '/downloads', label: settings.downloads.navLabel || 'Downloads', enabled: true, order: settings.downloads.navOrder || 6 });
+    items.push({ to: `${langPrefix}/downloads`, label: settings.downloads.navLabel || 'Downloads', enabled: true, order: settings.downloads.navOrder || 6 });
   }
   
   return items.sort((a, b) => a.order - b.order);
