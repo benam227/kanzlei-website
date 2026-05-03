@@ -4,6 +4,7 @@ import { usePageMeta } from '../lib/usePageMeta';
 import { useLanguage } from '../lib/useLanguage';
 import { loadHomepage, loadOrderedServices, loadHomepageJson, loadDownloads, loadFAQ, toYouTubeEmbedUrl, type CustomSection } from '../lib/content';
 import GatedEmbed from '../components/GatedEmbed';
+import Button from '../components/ui/Button';
 
 interface ServiceItem {
   title: string;
@@ -74,9 +75,11 @@ export default function HomePage() {
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
               <p className="text-gray-600">{service.text}</p>
               {service.href && (
-                <Link to={service.href} className="inline-block mt-3 text-[#1a365d] hover:underline">
-                  Mehr →
-                </Link>
+                <Button variant="secondary" asChild>
+                  <Link to={service.href} className="mt-3">
+                    Mehr →
+                  </Link>
+                </Button>
               )}
             </div>
           ))}
@@ -94,12 +97,11 @@ export default function HomePage() {
         <p className="text-gray-600 mb-8">
           {homepageJson?.contactIntro || 'Rufen Sie uns an oder buchen Sie online einen Beratungstermin.'}
         </p>
-        <Link
-          to={`/${lang === 'en' ? 'en/' : ''}termin-buchen`}
-          className="inline-block px-8 py-4 bg-[#c53030] text-white rounded-lg text-lg font-semibold hover:bg-[#e53e3e] transition-colors"
-        >
-          {homepageJson?.ctaText || homepage?.ctaText || 'Termin buchen'}
-        </Link>
+        <Button variant="primary" asChild>
+          <Link to={`/${lang === 'en' ? 'en/' : ''}termin-buchen`}>
+            {homepageJson?.ctaText || homepage?.ctaText || 'Termin buchen'}
+          </Link>
+        </Button>
       </div>
     </section>
   );
@@ -252,12 +254,11 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto px-4 text-center">
             {title && <h2 className="text-3xl font-bold mb-6">{title}</h2>}
             {content && <p className="text-gray-200 mb-8">{content}</p>}
-            <Link
-              to={`/${lang === 'en' ? 'en/' : ''}termin-buchen`}
-              className="inline-block px-8 py-4 bg-[#c53030] text-white rounded-lg text-lg font-semibold hover:bg-[#e53e3e] transition-colors"
-            >
-              Termin buchen
-            </Link>
+        <Button variant="primary" asChild>
+          <Link to={`/${lang === 'en' ? 'en/' : ''}termin-buchen`}>
+            {homepageJson?.ctaText || homepage?.ctaText || 'Termin buchen'}
+          </Link>
+        </Button>
           </div>
         </section>
       );
